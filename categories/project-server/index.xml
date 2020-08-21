@@ -1,0 +1,81 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Project Server - Category - LoveIt</title>
+        <link>/categories/project-server/</link>
+        <description>Project Server - Category - LoveIt</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate><atom:link href="/categories/project-server/" rel="self" type="application/rss+xml" /><item>
+    <title>Access all Project Online Projects Sites using CSOM</title>
+    <link>/project-server/access-all-online-projects-568c7c59/access-all-online-projects-568c7c59/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/access-all-online-projects-568c7c59/access-all-online-projects-568c7c59/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Access all Project Online Projects Sites using CSOM Original Technet Description URL Description Download: [Download Link](Download\Example CSOM to access all Project Sites.ps1)  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to get a list of all the Project Sites in the PWA Site Collection linked to a project. It will then access each of those project sites to enable you to easily update / review the site if needed.]]></description>
+</item><item>
+    <title>Add Project Server Users to Project Server Group using PowerShell</title>
+    <link>/project-server/add-server-users-to-server-40aed317/add-server-users-to-server-40aed317/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/add-server-users-to-server-40aed317/add-server-users-to-server-40aed317/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add Project Server Users to Project Server Group using PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Based on the insights of Paul Mather (Modify lookup tables:https://gallery.technet.microsoft.com/scriptcenter/Update-Server-Lookup-table-bb1ae14f) I created a PowerShell function to add users (from file with UIDs of resources, one UID per line) to a Project Server Group (indentified by its UID).
+I tested it with Project Server 2013, but it probably works also with other versions.]]></description>
+</item><item>
+    <title>Amazing Custom Whiteboard Animation Video Makers to Create Your Own Video</title>
+    <link>/project-server/amazing-custom-whiteboard-94788a33/amazing-custom-whiteboard-94788a33/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/amazing-custom-whiteboard-94788a33/amazing-custom-whiteboard-94788a33/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Amazing Custom Whiteboard Animation Video Makers to Create Your Own Video Original Technet Description URL Description Download: Not available.  Output from Technet Gallery If you want to attract people into buying your product, just give them a Video! In this digital time, its all about videos, you can find many purchasers who would love to watch a video instead of reading the detailed description.]]></description>
+</item><item>
+    <title>An updated version for the Visual reports in Project Professional</title>
+    <link>/project-server/an-updated-version-for-the-da120217/an-updated-version-for-the-da120217/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/an-updated-version-for-the-da120217/an-updated-version-for-the-da120217/</guid>
+    <description><![CDATA[Original Links  Original Technet URL An updated version for the Visual reports in Project Professional Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The outdated Excel reports that come with Project Professional (versions 2007, 2010, 2013, and Project Pro for Office 365) are revisited by me in a blog post on The Project Corner. For a complete description and information on how to install the files on your machine please visit the post:]]></description>
+</item><item>
+    <title>Auto notify to last week timesheets defaulter -PS2010</title>
+    <link>/project-server/auto-notify-to-last-week-a637ad53/auto-notify-to-last-week-a637ad53/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/auto-notify-to-last-week-a637ad53/auto-notify-to-last-week-a637ad53/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Auto notify to last week timesheets defaulter -PS2010 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Ever need this kind of requirement to combine both type of resources (one who have not submitted and the other ones who have not created timesheets for last week) and notify them, use this script.
+This stored procedure can be attached with SQL server agent job to execute it on first morning of new week so that all the concerned resources of last week will get a notification email with Timesheet Manager in cc.]]></description>
+</item><item>
+    <title>Automate the Management of Checked-out Projects in Project Server</title>
+    <link>/project-server/automate-the-management-of-23a1d5d3/automate-the-management-of-23a1d5d3/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/automate-the-management-of-23a1d5d3/automate-the-management-of-23a1d5d3/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Automate the Management of Checked-out Projects in Project Server Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script will automate the management of checked-out Projects in Project Server. It will check the Project Server database for a list of currently checked-out Projects, then send an email to each person who has a Project checked-out longer than x days (7 by default).]]></description>
+</item><item>
+    <title>Bulk create Project Server Project Sites</title>
+    <link>/project-server/bulk-create-server-sites-784f7b29/bulk-create-server-sites-784f7b29/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/bulk-create-server-sites-784f7b29/bulk-create-server-sites-784f7b29/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Bulk create Project Server Project Sites Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will bulk create a project site for the associated project using the correct site template set on the EPT for all projects without an associated project site. This script does require PowerShell 3.0 or later. A code snippet can be seen below:]]></description>
+</item><item>
+    <title>Capture Project Online user last logon</title>
+    <link>/project-server/capture-online-user-last-43621a21/capture-online-user-last-43621a21/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/capture-online-user-last-43621a21/capture-online-user-last-43621a21/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Capture Project Online user last logon Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables you to capture the PWA users last logon time from the Project Web App homepage. It is simple to deploy and use - you just need to set up the list first. The link to the blog post below details the steps required.]]></description>
+</item><item>
+    <title>Capture Project Team Morale in SharePoint / Project Online / Project Server 2013</title>
+    <link>/project-server/capture-morale-in-9702d380/capture-morale-in-9702d380/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/capture-morale-in-9702d380/capture-morale-in-9702d380/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Capture Project Team Morale in SharePoint / Project Online / Project Server 2013 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables you to capture the project team morale from the Project Web App homepage or anyother SharePoint site. It is simple to deploy and use - just need to set up the list first. The link to the blog post below details the steps required.]]></description>
+</item><item>
+    <title>Cascading custom fields</title>
+    <link>/project-server/cascading-custom-fields-783ea791/cascading-custom-fields-783ea791/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/cascading-custom-fields-783ea791/cascading-custom-fields-783ea791/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Cascading custom fields Original Technet Description URL Description Download: [Download Link](Download\Cascading custom fields.docx)  Output from Technet Gallery In this article I&rsquo;ll detail one of a specific configurations to automatically display values in a lookup table custom field depending on the value select in another custom field. This configuration is based on custom fields, departments and project detail pages (PDP).
+More details here:
+http://psbehindthescene.blogspot.co.uk/2014/04/cascading-custom-fields.html]]></description>
+</item></channel>
+</rss>

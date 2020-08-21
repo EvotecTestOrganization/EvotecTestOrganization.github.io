@@ -1,0 +1,97 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Active Directory - Tag - LoveIt</title>
+        <link>/tags/active-directory/</link>
+        <description>Active Directory - Tag - LoveIt</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate><atom:link href="/tags/active-directory/" rel="self" type="application/rss+xml" /><item>
+    <title>Access all Project Online Projects Sites using CSOM</title>
+    <link>/project-server/access-all-online-projects-568c7c59/access-all-online-projects-568c7c59/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/project-server/access-all-online-projects-568c7c59/access-all-online-projects-568c7c59/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Access all Project Online Projects Sites using CSOM Original Technet Description URL Description Download: [Download Link](Download\Example CSOM to access all Project Sites.ps1)  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to get a list of all the Project Sites in the PWA Site Collection linked to a project. It will then access each of those project sites to enable you to easily update / review the site if needed.]]></description>
+</item><item>
+    <title>Add a LPR Printer include Port and needed Driver</title>
+    <link>/printing/printer-ports-and-printer-drivers/add-a-lpr-printer-include-f462f332/add-a-lpr-printer-include-f462f332/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/add-a-lpr-printer-include-f462f332/add-a-lpr-printer-include-f462f332/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add a LPR Printer include Port and needed Driver Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script installs a LPR networkprinters and the needed driver. If you want you can use it for your logon script or manually.
+The following information are needed:
+&lt;PRINTER_NAME&gt; = Name of the Printer, you will find the name in the INF file of the driver]]></description>
+</item><item>
+    <title>Add a Network Printer</title>
+    <link>/printing/printer-ports-and-printer-drivers/85640294-d965-43bc-8ee6-5c1c9daa704d/85640294-d965-43bc-8ee6-5c1c9daa704d/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/85640294-d965-43bc-8ee6-5c1c9daa704d/85640294-d965-43bc-8ee6-5c1c9daa704d/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add a Network Printer Original Technet Description URL Description Download: Not available.  Output from Technet Gallery **Submitted By: **Tim Laqua
+Installs a network printer at logon. The script determines if the user has this printer installed already; if they do, then the script exits. If the printer is not installed the script installs the printer and, if the user does not have a local default printer installed, sets the printer as the default printer.]]></description>
+</item><item>
+    <title>Add a New Default printer</title>
+    <link>/printing/printer-ports-and-printer-drivers/9e52c5e2-cd0f-413b-acad-a010b031d44d/9e52c5e2-cd0f-413b-acad-a010b031d44d/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/9e52c5e2-cd0f-413b-acad-a010b031d44d/9e52c5e2-cd0f-413b-acad-a010b031d44d/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add a New Default printer Original Technet Description URL Description Download: Not available.  Output from Technet Gallery **Submitted By: **Antonio Luiz Camêlo Chaves
+Adds a network printer and sets it as the default printer.
+Visual Basic
+1 2 3 4 5 6 7 8  @Echo Off REM Change \\COMPUTER\PRINTER by your printer&#39;s UNC REM Add printer rundll32 printui.dll,PrintUIEntry /in /n\\COMPUTER\PRINTER REM Set printer as default rundll32 printui.]]></description>
+</item><item>
+    <title>Add a Printer Connection</title>
+    <link>/printing/client-side-printing/db512484-6bf1-4e3a-aa74-8f4e2cbe296b/db512484-6bf1-4e3a-aa74-8f4e2cbe296b/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/client-side-printing/db512484-6bf1-4e3a-aa74-8f4e2cbe296b/db512484-6bf1-4e3a-aa74-8f4e2cbe296b/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add a Printer Connection Original Technet Description URL Description Download: Not available.  Output from Technet Gallery Adds a printer connection to a network printer. Script must be run on the local computer.
+Visual Basic
+1 2 3 4  Set WshNetwork = CreateObject(&#34;WScript.Network&#34;) WshNetwork.AddWindowsPrinterConnection &#34;\\PrintServer1\Xerox300&#34; WshNetwork.SetDefaultPrinter &#34;\\PrintServer1\Xerox300&#34;   ]]></description>
+</item><item>
+    <title>Add a Printer Using an INF Fil</title>
+    <link>/printing/printer-ports-and-printer-drivers/bb1241bc-db60-4ca7-9363-89de960da7c2/bb1241bc-db60-4ca7-9363-89de960da7c2/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/bb1241bc-db60-4ca7-9363-89de960da7c2/bb1241bc-db60-4ca7-9363-89de960da7c2/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add a Printer Using an INF Fil Original Technet Description URL Description Download: Not available.  Output from Technet Gallery **Submitted By: **vbzine
+Adds a printer and a TCP/IP printer port using information found in an INF file.
+Visual Basic
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54  Dim Computer, DriverName, DriverInf, IPAddress, PortName, PrinterName Dim WMI, NewPort, NewDriver, NewPrinter &#39; Enter Details of Printer &#39; Computer on which to create the printer.]]></description>
+</item><item>
+    <title>Add a TCP/IP Printer Port and Printer</title>
+    <link>/printing/printer-ports-and-printer-drivers/94e3de42-13b0-4972-aa5a-87ca6781399e/94e3de42-13b0-4972-aa5a-87ca6781399e/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/94e3de42-13b0-4972-aa5a-87ca6781399e/94e3de42-13b0-4972-aa5a-87ca6781399e/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add a TCP/IP Printer Port and Printer Original Technet Description URL Description Download: Not available.  Output from Technet Gallery **Submitted By: **Kiran Kumar
+Adds a TCP/IP printer port and printer.
+Visual Basic
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  strComputer = &#34;.&#34; Set objWMIService = GetObject(&#34;winmgmts:&#34; _ &amp; &#34;{impersonationLevel=impersonate}!]]></description>
+</item><item>
+    <title>Add and Remove Printers</title>
+    <link>/printing/printer-ports-and-printer-drivers/10ab836d-4d38-45a5-8d27-ba9af1717930/10ab836d-4d38-45a5-8d27-ba9af1717930/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/10ab836d-4d38-45a5-8d27-ba9af1717930/10ab836d-4d38-45a5-8d27-ba9af1717930/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add and Remove Printers Original Technet Description URL Description Download: Not available.  Output from Technet Gallery **Submitted By: **Larry Motz
+Logon script that installs new printers and deletes old printers.
+Visual Basic
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  &#39; +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ &#39; Script to remove a printer and add a new replacement printer (Names are case sensative, at least for me they were).]]></description>
+</item><item>
+    <title>Add Printer</title>
+    <link>/printing/printer-ports-and-printer-drivers/d230c216-9d21-4130-a190-4049ca2df21c/d230c216-9d21-4130-a190-4049ca2df21c/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/printer-ports-and-printer-drivers/d230c216-9d21-4130-a190-4049ca2df21c/d230c216-9d21-4130-a190-4049ca2df21c/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add Printer Original Technet Description URL Description Download: Not available.  Output from Technet Gallery &lt;html xmlns=&rdquo;&quot;&gt;
+This script uses the [wmiclass] type accelerator which createsan instance of the System.Management.ManagementClass which
+gives access to createInstance() method. The Dot Net framework class system.management.managementclass is needed so we canuse the equilivant to the spawninstance method from vbscript
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  # -------------------------------------------------------------------- # createPrinterPort.]]></description>
+</item><item>
+    <title>Add Printer Permission</title>
+    <link>/printing/print-servers-print-queues-and-print-jobs/add-printer-permission-c0ece1f3/add-printer-permission-c0ece1f3/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>/printing/print-servers-print-queues-and-print-jobs/add-printer-permission-c0ece1f3/add-printer-permission-c0ece1f3/</guid>
+    <description><![CDATA[Original Links  Original Technet URL Add Printer Permission Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Windows Server 2012 comes with the PrintManagement module, which makes automation Management of Printers easier. But testing cmdlets like Add-Printer and Set-Printer I noticed that you can set Printer Permission only using the Parameter -PermissionSDDL . These Parameters in both cmdlets expect Printer Permission using Security Definition Description Language (SDDL) which is not what you can type on the command line that easy.]]></description>
+</item></channel>
+</rss>

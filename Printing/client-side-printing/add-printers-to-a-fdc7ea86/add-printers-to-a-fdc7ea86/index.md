@@ -1,0 +1,346 @@
+# Add printers to a PC/computer based on computer group membership in AD
+
+## Original Links
+
+- [x] Original Technet URL [Add printers to a PC/computer based on computer group membership in AD](https://gallery.technet.microsoft.com/Add-printers-to-a-fdc7ea86)
+- [x] Original Technet Description URL [Description](https://gallery.technet.microsoft.com/Add-printers-to-a-fdc7ea86/description)
+- [x] Download: [Download Link](Download\lrsprinterscript.txt)
+
+## Output from Technet Gallery
+
+This is the first large powershell script I've written after scouring the net for something like it, it didn't exist.
+
+In our environment each computer object is a member of a group that looks like this
+
+ptr.gs.printername.printservername
+
+and then for each printer there is a default group as well
+
+ptr.gs.printername.printservername.default
+
+Some computers are members of up to 10 groups.
+
+We had an old VBS script that did this on our XP, but for our Windows 7 machines we wanted to use powershell instead. This uses the split command, which is only present in powershell 3.0 (so you'll need WMF 3.0 installed).
+
+Here is what I came up with, hopefully it will help others. We use a product called VPSX by LRS for our printing, but you can substitute the add and remove commands to your liking for either default windows printer add commands or whatever 3rd party product  you might use.
+
+There's a fair bit of repeated code, but I had a hard time consolidating after getting it working so I stuck with what I had. Enjoy. Hopefully someone finds a use for this.
+
+```
+############################################################################
+############################################################################
+#####                                                                  #####
+##### Printer powershell script written by Dan Tootell                 #####
+#####                                                                  #####
+##### This script checks computer group membership and adds printers   #####
+##### based on the group membership in active directory.               #####
+#####                                                                  #####
+#####                                                                  #####
+##### Logic is also included to remove any printers that were not      #####
+##### added from the LRS server and removes them.                      #####
+#####                                                                  #####
+#####                                                                  #####
+##### Script removes printers when a computer is no longer a member of #####
+##### the active directory group.                                      #####
+#####                                                                  #####
+##### Powershell 3.0 must be used.                                     #####
+#####                                                                  #####
+##### Logs are stored at c:\logs\lrsprinterscript.txt                  #####
+#####                                                                  #####
+#####                                                                  #####
+############################################################################
+############################################################################
+if (Test-Path C:\logs)
+{
+    if (Test-Path C:\logs\lrsprinterscript.txt)
+    {
+        remove-item c:\logs\lrsprinterscript.txt
+    }
+    else
+    {
+        "Log Folder exists, file doesn't"
+    }
+}
+else
+{
+New-Item -ItemType directory -Path C:\logs\
+}
+$logpath = "c:\logs\lrsprinterscript.txt"
+$numberLines = 500
+$date = Get-Date
+ add-content -Path $logpath -Value $Date -Force
+ add-content -Path $logpath -Value "Adding Printers based on group Membership" -Force
+ if (Test-Path "C:\Program Files\LRS")
+ {
+    add-content -Path $logpath -Value "LRS Driver installed, continuing on with script"
+ }
+ else
+ {
+    add-content -Path $logpath -Value "LRS Driver NOT installed, install the driver in order to add printers to LRS. Driver is located here \\sccfgmgr1\sccm_dsl\packages\LRS\"
+    Exit
+ }
+#get the computer group memberof values from active directory.
+$strName = $env:computername + '$'
+$strFilter = "(&(objectCategory=Computer)(samAccountName=$strName))"
+$objSearcher = New-Object System.DirectoryServices.DirectorySearcher
+$objSearcher.Filter = $strFilter
+$objPath = $objSearcher.FindOne()
+$objComputer = $objPath.GetDirectoryEntry()
+$DN = $objComputer.distinguishedName
+$ADVal = [ADSI]"LDAP://$DN"
+$groupstring = $adval.memberof.value
+if ($groupstring.count -eq 0)
+{
+    exit
+}
+#split the group membership and remove extra text so that we have just the printer name to work with.
+$array = $groupstring.split(" ")
+$pgroups = $array -like "CN=ptr*"
+$pgroups = $pgroups.replace("CN=ptr.gs.", "")
+$pgroups = $pgroups.replace(",OU=Printer", "")
+#if only 1 printer group exists use that printer group as the default group
+if($pgroups.count -eq "1")
+    {
+    $default = $pgroups
+    }
+elseif($pgroups.count -gt "1")
+    {
+    $default = $pgroups -like "*default*"
+    }
+add-content -Path $logpath -Value " " -Force
+add-content -Path $logpath -Value "Number of Printer Groups found" -Force
+add-content -Path $logpath -Value $pgroups.count -Force
+add-content -Path $logpath -Value " " -Force
+#define blank arrays
+$grouparray = @()
+$instarray = @()
+$ptradd = @()
+$ptrupdate = @()
+$ptrrem = @()
+$ptrwork = @()
+$defarray = @()
+$ptrworkdefault =@()
+$diffdefault2 =@()
+$ptrremdefault = @()
+$testarray2 = @()
+$ptrstoberemoved1 =@()
+#splits printer names in the pgroups array into single names
+foreach ($printer in $pgroups)
+    {
+    $printersplit = $printer.split(".")
+    $ptr = $printersplit[0]
+    $ptr = $ptr.ToLower()
+    $grouparray = $grouparray + $ptr
+    }
+#Check for Installed network Printers that didn't come from LRS. If they don't contain LRS in the name, delete them. for all other printers, add them to the $instarray so that we have a record of all printers currently on the workstation.
+$installed = Get-WmiObject Win32_Printer | where{$_.network -eq "True"}
+foreach ($inst in $installed)
+      {
+        if($inst.name -notlike "*lrs*") {$inst.delete()
+        add-content -Path $logpath -Value "Removed the following printer because it is not an LRS printer" -Force
+        add-content -Path $logpath -Value $inst -Force
+        }
+        else
+        {
+        $name = $inst.comment
+        $name = $name.tolower()
+        $instarray = $instarray + $name
+        }
+      }
+add-content -Path $logpath -Value " " -Force
+add-content -Path $logpath -Value "The following printers are currently installed" -Force
+add-content -Path $logpath -Value $instarray -Force
+add-content -Path $logpath -Value " " -Force
+#if a default printer group exists, split the name at the period and define the defptr variable as the first part of the group before the period.
+if ($default.count -gt "0")
+{
+$defaultsplit = $default.split(".")
+$defptr = $defaultsplit[0]
+}
+add-content -Path $logpath -Value "The Default Printer will be $defptr" -Force
+add-content -Path $logpath -Value " " -Force
+$defarray = $instarray
+#check for more than one default printer group. If so, pick the last one in the list of defaults and add the rest of the printers.
+if ($default.count -gt "1")
+    {
+    send-mailmessage -to user@domain.com -from LRSprinterscript@domain.com -subject "Computer $env:computername is in multiple default printer groups" -smtpserver mxrelay.domain.com
+    add-content -Path $logpath -Value "More than one default printer exists, only one default printer may be used." -Force
+                #compare installed printers to group membership
+                $diffdefault = compare-object -referenceobject $instarray -DifferenceObject $grouparray -IncludeEqual
+                #create variables that reflect printers that need to be added, updated, or removed based on the comparison to group membership
+                $ptradddefault = $diffdefault | where {$_.sideindicator -eq "=>"} | select InputObject
+                $ptrupdatedefault = $diffdefault | where {$_.sideindicator -eq "=="} | select InputObject
+                $ptrremdefault = $diffdefault | where {$_.sideindicator -eq "<="} | select InputObject
+                #add add/update printers to one variable
+                $ptrworkdefault += $ptradddefault
+                $ptrworkdefault += $ptrupdatedefault
+                #compare default printer to list of printers that needs to be updated/added so that we can seperate the default printer from regular printers
+                $diffdefault2 = compare-object -referenceobject $defptr -DifferenceObject $ptrworkdefault.inputobject -IncludeEqual
+                $diffdefaultother = $diffdefault2 | where {$_.sideindicator -ne "=="}
+                add-content -Path $logpath -Value "Adding these printers as secondaries" -Force
+                add-content -Path $logpath -Value $diffdefaultother.inputobject -Force
+                add-content -Path $logpath -Value " " -Force
+                #code at create/update printers
+                foreach ($ptrtobeadded in $ptrworkdefault)
+                    {
+                        $ptrtobeadded2 = $ptrtobeadded.InputObject
+                        & "C:\Program Files\LRS\VPSX Printer Driver Management\drvaddprt.exe" http://lrsprd1.domain.com:631/$ptrtobeadded2
+                    }
+                #code to create/update default printer
+                & "C:\Program Files\LRS\VPSX Printer Driver Management\drvaddprt.exe" http://lrsprd1.domain.com:631/$defptr -d
+                #code to remove printers that are no longer part of computer group membership
+                add-content -Path $logpath -Value " " -Force
+                add-content -Path $logpath -Value "Removing the following printers, computer is not a member of their printer groups" -Force
+                add-content -Path $logpath -Value $ptrremdefault.inputobject -Force
+                if($ptrremdefault)
+                {
+                    write-host "Code to remove " $ptrremdefault.inputobject
+                    $ptrstoberemoved1 = Get-WmiObject Win32_Printer | where{$_.network -eq "True"}
+                    $ptrremdefault2 = $ptrremdefault.InputObject
+                    $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                  foreach ($ptrbeingremoved in $ptrstoberemoved1)
+                        {
+                            $ptrremdefault2 = $ptrremdefault.InputObject
+                            $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                            if($ptrremdefault3 -like $ptrbeingremoved.comment)
+                                     {
+                                        add-content -Path $logpath -Value "Removed the following printer, computer is not a member of their printer groups" -Force
+                                        add-content -Path $logpath -Value $ptrbeingremoved.name -Force
+                                        $ptrbeingremoved.delete()
+                                     }
+                        }
+                }
+                add-content -Path $logpath -Value " " -Force
+    }
+    #if there is no default group we need to just add all printer but no default.
+    Elseif($default.count -lt "1")
+    {
+    Write-host "No default group"
+    add-content -Path $logpath -Value "No Default Group exists" -Force
+                add-content -Path $logpath -Value " " -Force
+                add-content -Path $logpath -Value "Adding the following printers but with no default Printer" -Force
+                add-content -Path $logpath -Value $grouparray
+                foreach($nodefptr in $grouparray)
+                {
+                & "C:\Program Files\LRS\VPSX Printer Driver Management\drvaddprt.exe" http://lrsprd1.domain.com:631/$nodefptr
+                }
+                $diffdefault = compare-object -referenceobject $instarray -DifferenceObject $grouparray -IncludeEqual
+                #create variables that reflect printers that need to be added, updated, or removed based on the comparison to group membership
+                $ptradddefault = $diffdefault | where {$_.sideindicator -eq "=>"} | select InputObject
+                $ptrupdatedefault = $diffdefault | where {$_.sideindicator -eq "=="} | select InputObject
+                $ptrremdefault = $diffdefault | where {$_.sideindicator -eq "<="} | select InputObject
+                #add add/update printers to one variable
+                $ptrworkdefault += $ptradddefault
+                $ptrworkdefault += $ptrupdatedefault
+                #code to remove printers that are no longer part of computer group membership
+                if($ptrremdefault)
+                {
+                    write-host "Code to remove " $ptrremdefault.inputobject
+                    $ptrstoberemoved1 = Get-WmiObject Win32_Printer | where{$_.network -eq "True"}
+                    $ptrremdefault2 = $ptrremdefault.InputObject
+                    $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                  foreach ($ptrbeingremoved in $ptrstoberemoved1)
+                        {
+                            $ptrremdefault2 = $ptrremdefault.InputObject
+                            $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                            if($ptrremdefault3 -like $ptrbeingremoved.comment)
+                                     {
+                                        add-content -Path $logpath -Value "Removed the following printer, computer is not a member of their printer groups" -Force
+                                        add-content -Path $logpath -Value $ptrbeingremoved.name -Force
+                                        $ptrbeingremoved.delete()
+                                     }
+                        }
+                }
+                add-content -Path $logpath -Value " " -Force
+                add-content -Path $logpath -Value "Removing the following printers, computer is not a member of their printer groups" -Force
+                add-content -Path $logpath -Value $ptrremdefault.inputobject -Force
+    }
+    #if only one default group exists, and only one printer group exists, we only need to add one printer and make it default.
+    Elseif($default.count -eq "1")
+        {
+            if($pgroups.count -eq "1")
+            {
+                #compare the default printer to installed printers
+                $diffdefault = compare-object -referenceobject $defptr -DifferenceObject $instarray -IncludeEqual
+                #if there are installed printers that don't match the default, we need to remove them
+                $ptrremdefault = $diffdefault | where {$_.sideindicator -eq "=>"} | select InputObject
+                #code to create/update printers
+                add-content -Path $logpath -Value " " -Force
+                add-content -Path $logpath -Value "Only one printer group defined, adding that printer as default" -Force
+                add-content -Path $logpath -Value $defptr -Force
+                #Code to create/update $defptr as default"
+                & "C:\Program Files\LRS\VPSX Printer Driver Management\drvaddprt.exe" http://lrsprd1.domain.com:631/$defptr -d
+                add-content -Path $logpath -Value " " -Force
+                #code to remove printers that are no longer part of computer group membership
+                if($ptrremdefault)
+                {
+                    $ptrstoberemoved1 = Get-WmiObject Win32_Printer | where{$_.network -eq "True"}
+                    $ptrremdefault2 = $ptrremdefault.InputObject
+                    $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                  foreach ($ptrbeingremoved in $ptrstoberemoved1)
+                        {
+                            $ptrremdefault2 = $ptrremdefault.InputObject
+                            $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                            if($ptrremdefault3 -like $ptrbeingremoved.comment)
+                                     {
+                                        add-content -Path $logpath -Value "Removed the following printer, computer is not a member of their printer groups" -Force
+                                        add-content -Path $logpath -Value $ptrbeingremoved.name -Force
+                                        $ptrbeingremoved.delete()
+                                     }
+                        }
+                }
+            }
+            #if default group count is one and printergroup count is more than 1 we need to add the all printers and the default.
+            else
+            {
+                #compare installed printers to group membership
+                $diffdefault = compare-object -referenceobject $instarray -DifferenceObject $grouparray -IncludeEqual
+                #create variables that reflect printers that need to be added, updated, or removed based on the comparison to group membership
+                $ptradddefault = $diffdefault | where {$_.sideindicator -eq "=>"} | select InputObject
+                $ptrupdatedefault = $diffdefault | where {$_.sideindicator -eq "=="} | select InputObject
+                $ptrremdefault = $diffdefault | where {$_.sideindicator -eq "<="} | select InputObject
+                #add add/update printers to one variable
+                $ptrworkdefault += $ptradddefault
+                $ptrworkdefault += $ptrupdatedefault
+                #compare default printer to list of printers that needs to be updated/added so that we can seperate the default printer from regular printers
+                $diffdefault2 = compare-object -referenceobject $defptr -DifferenceObject $ptrworkdefault.inputobject -IncludeEqual
+                $diffdefaultother = $diffdefault2 | where {$_.sideindicator -ne "=="}
+                add-content -Path $logpath -Value "Adding these printers as secondaries" -Force
+                add-content -Path $logpath -Value $diffdefaultother.inputobject -Force
+                add-content -Path $logpath -Value " " -Force
+                #code to create/update printers
+                    foreach ($ptrtobeadded in $ptrworkdefault)
+                    {
+                        $ptrtobeadded2 = $ptrtobeadded.InputObject
+                        write-host $ptrtobeadded2
+                        & "C:\Program Files\LRS\VPSX Printer Driver Management\drvaddprt.exe" http://lrsprd1.domain.com:631/$ptrtobeadded2
+                    }
+                #code to add default as $defptr
+                & "C:\Program Files\LRS\VPSX Printer Driver Management\drvaddprt.exe" http://lrsprd1.domain.com:631/$defptr -d
+                #code to remove printers that are no longer part of computer group membership
+                if($ptrremdefault)
+                {
+                    write-host "Code to remove " $ptrremdefault.inputobject
+                    $ptrstoberemoved1 = Get-WmiObject Win32_Printer | where{$_.network -eq "True"}
+                    $ptrremdefault2 = $ptrremdefault.InputObject
+                    $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                  foreach ($ptrbeingremoved in $ptrstoberemoved1)
+                        {
+                            $ptrremdefault2 = $ptrremdefault.InputObject
+                            $ptrremdefault3 = $ptrremdefault2.ToUpper()
+                            if($ptrremdefault3 -like $ptrbeingremoved.comment)
+                                     {
+                                        add-content -Path $logpath -Value "Removed the following printer, computer is not a member of their printer groups" -Force
+                                        add-content -Path $logpath -Value $ptrbeingremoved.name -Force
+                                        $ptrbeingremoved.delete()
+                                     }
+                        }
+                }
+                add-content -Path $logpath -Value " " -Force
+                add-content -Path $logpath -Value "Removing the following printers, computer is not a member of their printer groups" -Force
+                add-content -Path $logpath -Value $ptrremdefault.inputobject -Force
+            }
+        }
+write-host "The End"
+```
+

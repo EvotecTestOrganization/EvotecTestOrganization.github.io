@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Servers on LoveIt</title>
+    <link>/project-server/</link>
+    <description>Recent content in Project Servers on LoveIt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 01 Dec 2019 21:57:40 +0800</lastBuildDate>
+    
+	<atom:link href="/project-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Access all Project Online Projects Sites using CSOM</title>
+      <link>/project-server/access-all-online-projects-568c7c59/access-all-online-projects-568c7c59/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/access-all-online-projects-568c7c59/access-all-online-projects-568c7c59/</guid>
+      <description>Original Links  Original Technet URL Access all Project Online Projects Sites using CSOM Original Technet Description URL Description Download: [Download Link](Download\Example CSOM to access all Project Sites.ps1)  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to get a list of all the Project Sites in the PWA Site Collection linked to a project. It will then access each of those project sites to enable you to easily update / review the site if needed.</description>
+    </item>
+    
+    <item>
+      <title>Add Project Server Users to Project Server Group using PowerShell</title>
+      <link>/project-server/add-server-users-to-server-40aed317/add-server-users-to-server-40aed317/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/add-server-users-to-server-40aed317/add-server-users-to-server-40aed317/</guid>
+      <description>Original Links  Original Technet URL Add Project Server Users to Project Server Group using PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Based on the insights of Paul Mather (Modify lookup tables:https://gallery.technet.microsoft.com/scriptcenter/Update-Server-Lookup-table-bb1ae14f) I created a PowerShell function to add users (from file with UIDs of resources, one UID per line) to a Project Server Group (indentified by its UID).
+I tested it with Project Server 2013, but it probably works also with other versions.</description>
+    </item>
+    
+    <item>
+      <title>Amazing Custom Whiteboard Animation Video Makers to Create Your Own Video</title>
+      <link>/project-server/amazing-custom-whiteboard-94788a33/amazing-custom-whiteboard-94788a33/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/amazing-custom-whiteboard-94788a33/amazing-custom-whiteboard-94788a33/</guid>
+      <description>Original Links  Original Technet URL Amazing Custom Whiteboard Animation Video Makers to Create Your Own Video Original Technet Description URL Description Download: Not available.  Output from Technet Gallery If you want to attract people into buying your product, just give them a Video! In this digital time, its all about videos, you can find many purchasers who would love to watch a video instead of reading the detailed description.</description>
+    </item>
+    
+    <item>
+      <title>An updated version for the Visual reports in Project Professional</title>
+      <link>/project-server/an-updated-version-for-the-da120217/an-updated-version-for-the-da120217/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/an-updated-version-for-the-da120217/an-updated-version-for-the-da120217/</guid>
+      <description>Original Links  Original Technet URL An updated version for the Visual reports in Project Professional Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The outdated Excel reports that come with Project Professional (versions 2007, 2010, 2013, and Project Pro for Office 365) are revisited by me in a blog post on The Project Corner. For a complete description and information on how to install the files on your machine please visit the post:</description>
+    </item>
+    
+    <item>
+      <title>Auto notify to last week timesheets defaulter -PS2010</title>
+      <link>/project-server/auto-notify-to-last-week-a637ad53/auto-notify-to-last-week-a637ad53/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/auto-notify-to-last-week-a637ad53/auto-notify-to-last-week-a637ad53/</guid>
+      <description>Original Links  Original Technet URL Auto notify to last week timesheets defaulter -PS2010 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Ever need this kind of requirement to combine both type of resources (one who have not submitted and the other ones who have not created timesheets for last week) and notify them, use this script.
+This stored procedure can be attached with SQL server agent job to execute it on first morning of new week so that all the concerned resources of last week will get a notification email with Timesheet Manager in cc.</description>
+    </item>
+    
+    <item>
+      <title>Automate the Management of Checked-out Projects in Project Server</title>
+      <link>/project-server/automate-the-management-of-23a1d5d3/automate-the-management-of-23a1d5d3/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/automate-the-management-of-23a1d5d3/automate-the-management-of-23a1d5d3/</guid>
+      <description>Original Links  Original Technet URL Automate the Management of Checked-out Projects in Project Server Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script will automate the management of checked-out Projects in Project Server. It will check the Project Server database for a list of currently checked-out Projects, then send an email to each person who has a Project checked-out longer than x days (7 by default).</description>
+    </item>
+    
+    <item>
+      <title>Bulk create Project Server Project Sites</title>
+      <link>/project-server/bulk-create-server-sites-784f7b29/bulk-create-server-sites-784f7b29/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/bulk-create-server-sites-784f7b29/bulk-create-server-sites-784f7b29/</guid>
+      <description>Original Links  Original Technet URL Bulk create Project Server Project Sites Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will bulk create a project site for the associated project using the correct site template set on the EPT for all projects without an associated project site. This script does require PowerShell 3.0 or later. A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Capture Project Online user last logon</title>
+      <link>/project-server/capture-online-user-last-43621a21/capture-online-user-last-43621a21/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/capture-online-user-last-43621a21/capture-online-user-last-43621a21/</guid>
+      <description>Original Links  Original Technet URL Capture Project Online user last logon Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables you to capture the PWA users last logon time from the Project Web App homepage. It is simple to deploy and use - you just need to set up the list first. The link to the blog post below details the steps required.</description>
+    </item>
+    
+    <item>
+      <title>Capture Project Team Morale in SharePoint / Project Online / Project Server 2013</title>
+      <link>/project-server/capture-morale-in-9702d380/capture-morale-in-9702d380/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/capture-morale-in-9702d380/capture-morale-in-9702d380/</guid>
+      <description>Original Links  Original Technet URL Capture Project Team Morale in SharePoint / Project Online / Project Server 2013 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables you to capture the project team morale from the Project Web App homepage or anyother SharePoint site. It is simple to deploy and use - just need to set up the list first. The link to the blog post below details the steps required.</description>
+    </item>
+    
+    <item>
+      <title>Cascading custom fields</title>
+      <link>/project-server/cascading-custom-fields-783ea791/cascading-custom-fields-783ea791/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/cascading-custom-fields-783ea791/cascading-custom-fields-783ea791/</guid>
+      <description>Original Links  Original Technet URL Cascading custom fields Original Technet Description URL Description Download: [Download Link](Download\Cascading custom fields.docx)  Output from Technet Gallery In this article I&amp;rsquo;ll detail one of a specific configurations to automatically display values in a lookup table custom field depending on the value select in another custom field. This configuration is based on custom fields, departments and project detail pages (PDP).
+More details here:
+http://psbehindthescene.blogspot.co.uk/2014/04/cascading-custom-fields.html</description>
+    </item>
+    
+    <item>
+      <title>Catch the Information about the HR Colleagues in Offices</title>
+      <link>/project-server/catch-the-information-2fbe7eb9/catch-the-information-2fbe7eb9/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/catch-the-information-2fbe7eb9/catch-the-information-2fbe7eb9/</guid>
+      <description>Original Links  Original Technet URL Catch the Information about the HR Colleagues in Offices Original Technet Description URL Description Download: Not available.  Output from Technet Gallery Human Resources continuously sustain the improved bond between employees and management. Human Resources works like a network between these two main partitions of the business. The essential work of this unit is to support employees in achieving specific and organizational goalmouths. It can trace all the basics of an organization to every employees.</description>
+    </item>
+    
+    <item>
+      <title>Check effective SharePoint permissions for PWA users in PWA si</title>
+      <link>/project-server/check-effective-sharepoint-2f44b8a6/check-effective-sharepoint-2f44b8a6/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/check-effective-sharepoint-2f44b8a6/check-effective-sharepoint-2f44b8a6/</guid>
+      <description>Original Links  Original Technet URL Check effective SharePoint permissions for PWA users in PWA si Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The attached script will get a list of user accounts from the Project Server database based on membership in specific Project Server groups.
+It will then iterate through the user list and check the effective permission for the specified PWA site for each of them.</description>
+    </item>
+    
+    <item>
+      <title>Check entities from multiple Project Online PWA instances</title>
+      <link>/project-server/check-entities-from-a1cb87e4/check-entities-from-a1cb87e4/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/check-entities-from-a1cb87e4/check-entities-from-a1cb87e4/</guid>
+      <description>Original Links  Original Technet URL Check entities from multiple Project Online PWA instances Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will use the Project CSOM API to return a list of Enterprise Custom Fields from mutiple PWA instances. The user running the script specifies the number of PWA instances to check then enters the URL, Username and password for each. The fields will then be displayed in the console but it could easily be updated to output these to a file.</description>
+    </item>
+    
+    <item>
+      <title>Collecting ProjectServer logs</title>
+      <link>/project-server/collecting-projectserver-8a38c086/collecting-projectserver-8a38c086/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/collecting-projectserver-8a38c086/collecting-projectserver-8a38c086/</guid>
+      <description>Original Links  Original Technet URL Collecting ProjectServer logs Original Technet Description URL Description Download: Not available.  Output from Technet Gallery While debugging/testing features on ProjectServer you might need to examine logs. Here is a short step by step guid on how to get a clean log.
+&amp;ndash; Draft
+&amp;ndash;select * from msp_queue_project_message
+delete from msp_queue_project_message
+delete from msp_queue_project_group
+delete from msp_queue_project_group_archive
+delete from msp_queue_project_filter
+delete from msp_queue_project_stats
+  Do a new job - case save and/or publish</description>
+    </item>
+    
+    <item>
+      <title>Configure Project Server 2016 Beta 2 using PowerShell</title>
+      <link>/project-server/configure-server-2016-beta-ab806c4a/configure-server-2016-beta-ab806c4a/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/configure-server-2016-beta-ab806c4a/configure-server-2016-beta-ab806c4a/</guid>
+      <description>Original Links  Original Technet URL Configure Project Server 2016 Beta 2 using PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The following PowerShell scrips provisions SharePoint 2016 Technical Preview Beta 2
+Warning: There is no error trapping or testing to determine if something is
+already in place. My intention with this script is to execute line by line and if
+an error occurs, then determine the cause and skip or fix the issue.</description>
+    </item>
+    
+    <item>
+      <title>Configure Project Server 2016 Technical Preview Beta 1</title>
+      <link>/project-server/install-server-2016-7e0cebd0/install-server-2016-7e0cebd0/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/install-server-2016-7e0cebd0/install-server-2016-7e0cebd0/</guid>
+      <description>Original Links  Original Technet URL Configure Project Server 2016 Technical Preview Beta 1 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The following script is an example of loading project server 2016 technial preview from the SharePoint 2016 Technical Prview. The powershell script provides a place to update variables that are used thru the script. The script creates web application, site and provision project server using the new processes.</description>
+    </item>
+    
+    <item>
+      <title>Create Project Server 2010 / 2013 project from a template and update the EP</title>
+      <link>/project-server/create-server-2010-2013-19bd3cc7/create-server-2010-2013-19bd3cc7/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/create-server-2010-2013-19bd3cc7/create-server-2010-2013-19bd3cc7/</guid>
+      <description>Original Links  Original Technet URL Create Project Server 2010 / 2013 project from a template and update the EP Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will create a project from the specified project template then update that project to associate it with the correct EPT. By default, when creating projects from templates using the Create Project From Template PSI method, the projects will be associated with the defaut EPT.</description>
+    </item>
+    
+    <item>
+      <title>Create Project Server 2010 Project Professional 2010 accounts with PowerShell</title>
+      <link>/project-server/create-server-2010-dfb0fbba/create-server-2010-dfb0fbba/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/create-server-2010-dfb0fbba/create-server-2010-dfb0fbba/</guid>
+      <description>Original Links  Original Technet URL Create Project Server 2010 Project Professional 2010 accounts with PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This is a PowerShell script that will create the Project Server Project Professional 2010 account. The script works by creating a new registry key with the required string values. This is just an example to show how system administrators could automate the creation of the Project Server account.</description>
+    </item>
+    
+    <item>
+      <title>Custom and Native field bulk update, Project Onlin</title>
+      <link>/project-server/custom-and-native-field-29cb2e42/custom-and-native-field-29cb2e42/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/custom-and-native-field-29cb2e42/custom-and-native-field-29cb2e42/</guid>
+      <description>Original Links  Original Technet URL Custom and Native field bulk update, Project Onlin Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This pair of scripts can be used to query your instance of project web app and return your native and custom fields (along with some system information that supports them) and then uses that information in combination with a CSV of the updates you want to make in order to run a bulk update.</description>
+    </item>
+    
+    <item>
+      <title>Custom Project Status Report for Microsoft Project - All Versions</title>
+      <link>/project-server/custom-status-report-for-3f208f6a/custom-status-report-for-3f208f6a/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/custom-status-report-for-3f208f6a/custom-status-report-for-3f208f6a/</guid>
+      <description>Original Links  Original Technet URL Custom Project Status Report for Microsoft Project - All Versions Original Technet Description URL Description Download: [Download Link](Download\Custom Project Status Report for Microsoft Project - All Versions.zip)  Output from Technet Gallery The Custom Project Status Report for Microsoft Project offers a collection of useful information about key project data. It has been developed to help Project Managers get quick insights about their projects in a simple and objective way.</description>
+    </item>
+    
+    <item>
+      <title>Custom Reports for Project 2013 and 2016</title>
+      <link>/project-server/custom-reports-for-2013-584584de/custom-reports-for-2013-584584de/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/custom-reports-for-2013-584584de/custom-reports-for-2013-584584de/</guid>
+      <description>Original Links  Original Technet URL Custom Reports for Project 2013 and 2016 Original Technet Description URL Description Download: [Download Link](Download\Custom Reports for Project 2013 and 2016.zip)  Output from Technet Gallery The Custom Reports for Project 2013 &amp;amp; 2016 offer a collection of useful information about key project information. They have been developed to help Project Managers get quick insights about their projects in a simple and objective way. The reports present a collection of useful information about key project data, such as schedule, cost and work, allowing Project Managers to identify variances and discrepancies to be able to take quick corrective actions.</description>
+    </item>
+    
+    <item>
+      <title>Delete Project Server Project Sites</title>
+      <link>/project-server/delete-server-sites-9c3d3e95/delete-server-sites-9c3d3e95/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/delete-server-sites-9c3d3e95/delete-server-sites-9c3d3e95/</guid>
+      <description>Original Links  Original Technet URL Delete Project Server Project Sites Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will delete the project sites for the associated project. The projects are inputted from a text file. A code snippet can be seen below:
+1 2 3 4 5 6 7  #Fully test on a test PWA instance first #For projects that you wish to delete the project site, add the exact project names to a text file and reference the text file location below $projectList = Get-Content C:\Users\paulmather\Desktop\projectsitesstodelete.</description>
+    </item>
+    
+    <item>
+      <title>Display Project Online ideas list data</title>
+      <link>/project-server/display-online-ideas-list-c59c8cc7/display-online-ideas-list-c59c8cc7/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/display-online-ideas-list-c59c8cc7/display-online-ideas-list-c59c8cc7/</guid>
+      <description>Original Links  Original Technet URL Display Project Online ideas list data Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This JavaScript file enables you to view the Project Ideas list data on a page in the Project Web App site and provides a hyperlink to the projects that have been created from a list item. It is simple to deploy and use, just create a page in the PWA site, update the JavaScript file so that the listName variable has the correct project ideas list title, upload the JavaScript file and add it to the page using a content editor web part.</description>
+    </item>
+    
+    <item>
+      <title>Durations of 2016 in Microsoft Proj</title>
+      <link>/project-server/durations-of-2016-in-900089ab/durations-of-2016-in-900089ab/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/durations-of-2016-in-900089ab/durations-of-2016-in-900089ab/</guid>
+      <description>Original Links  Original Technet URL Durations of 2016 in Microsoft Proj Original Technet Description URL Description Download: [Download Link](Download\Durations of 2016.zip)  Output from Technet Gallery This Zip file contains a 2016 and a 2007 file format MPP. In it there is a set of tasks with the correct durations of:
+  the year
+  the quarters
+  the months
+  Using these files as a guideline you are sure to grab the correct duration for a specific time.</description>
+    </item>
+    
+    <item>
+      <title>Durations of 2017 in Microsoft Proj</title>
+      <link>/project-server/durations-of-2017-in-a117db34/durations-of-2017-in-a117db34/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/durations-of-2017-in-a117db34/durations-of-2017-in-a117db34/</guid>
+      <description>Original Links  Original Technet URL Durations of 2017 in Microsoft Proj Original Technet Description URL Description Download: [Download Link](Download\Durations of 2017.zip)  Output from Technet Gallery This Zip file contains a 2016 and a 2007 file format MPP. In it there is a set of tasks with the correct durations for:
+  the year
+  the quarters
+  the months
+  Using these files as a guideline you are sure to grab the correct duration for a specific time.</description>
+    </item>
+    
+    <item>
+      <title>Durations of 2018</title>
+      <link>/project-server/durations-of-2018-6e421d75/durations-of-2018-6e421d75/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/durations-of-2018-6e421d75/durations-of-2018-6e421d75/</guid>
+      <description>Original Links  Original Technet URL Durations of 2018 Original Technet Description URL Description Download: [Download Link](Download\Durations of 2018.zip)  Output from Technet Gallery This Zip file contains a 2016 and a 2007 file format MPP. In it there is a set of tasks with the correct durations of:
+  the year
+  the quarters
+  the months
+  Using these files as a guideline you are sure to grab the correct duration for a specific time.</description>
+    </item>
+    
+    <item>
+      <title>Durations of 2019</title>
+      <link>/project-server/durations-of-2019-1b3370a9/durations-of-2019-1b3370a9/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/durations-of-2019-1b3370a9/durations-of-2019-1b3370a9/</guid>
+      <description>Original Links  Original Technet URL Durations of 2019 Original Technet Description URL Description Download: [Download Link](Download\Durations of 2019.zip)  Output from Technet Gallery This Zip file contains a 2019 and a 2007 file format MPP. In it there is a set of tasks with the correct durations of:
+  the year
+  the quarters
+  the months
+  Using these files as a guideline you are sure to grab the correct duration for a specific time.</description>
+    </item>
+    
+    <item>
+      <title>Enable Project Server License for SharePoint 2016 / Project Server 2016</title>
+      <link>/project-server/enable-server-license-for-b3ab48d8/enable-server-license-for-b3ab48d8/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/enable-server-license-for-b3ab48d8/enable-server-license-for-b3ab48d8/</guid>
+      <description>Original Links  Original Technet URL Enable Project Server License for SharePoint 2016 / Project Server 2016 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Hello,
+Attached ps1 file will help you to enable Project Server license in SharePoint 2016 or Project Server 2016.
+How it works
+  Open &amp;ldquo;Enable-ProjectServerLicense-PS16.ps1&amp;rdquo; file in notepad.
+  put your Project Server 2016 Key in line number 21.</description>
+    </item>
+    
+    <item>
+      <title>Enhanced Microsoft&#39;s Project Online Power BI Content Pack with currency choice.</title>
+      <link>/project-server/microsofts-online-power-bi-0260454a/microsofts-online-power-bi-0260454a/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/microsofts-online-power-bi-0260454a/microsofts-online-power-bi-0260454a/</guid>
+      <description>Original Links  Original Technet URL Enhanced Microsoft&amp;rsquo;s Project Online Power BI Content Pack with currency choice. Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This file is based upon Microsoft&amp;rsquo;s content pack for Project Online and contains the following modifications.
+Currency : the user is prompted to enter their currency when they open the template, and combined with the locale set in the Options under Regional Settings ensures that currency values are displayed in the user&amp;rsquo;s local currency.</description>
+    </item>
+    
+    <item>
+      <title>Extract Project Online or Project Server 2013 / 2016 Timesheet data</title>
+      <link>/project-server/extract-online-or-server-c1cba361/extract-online-or-server-c1cba361/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/extract-online-or-server-c1cba361/extract-online-or-server-c1cba361/</guid>
+      <description>Original Links  Original Technet URL Extract Project Online or Project Server 2013 / 2016 Timesheet data Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to extract the timesheet data between the given start and end dates. The user running the script specifies the source PWA instance URL, Username and password. They then enter the start and finish dates in yyyy-mm-dd format and run.</description>
+    </item>
+    
+    <item>
+      <title>Heal The Project Calculation Service timeout problems</title>
+      <link>/project-server/heal-the-calculation-782f6eee/heal-the-calculation-782f6eee/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/heal-the-calculation-782f6eee/heal-the-calculation-782f6eee/</guid>
+      <description>Original Links  Original Technet URL Heal The Project Calculation Service timeout problems Original Technet Description URL Description Download: Not available.  Output from Technet Gallery One of the problems we encountered was timeout during an update of our projects from 2010 to 2016. Old cases need more time to be converted to the new format introduced in 2016.
+The Project Calculation Service does have a default timeout of five minutes.</description>
+    </item>
+    
+    <item>
+      <title>High Level Schedule Creation from top down estimates &amp; plausible work contours</title>
+      <link>/project-server/high-level-schedule-39b7c280/high-level-schedule-39b7c280/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/high-level-schedule-39b7c280/high-level-schedule-39b7c280/</guid>
+      <description>Original Links  Original Technet URL High Level Schedule Creation from top down estimates &amp;amp; plausible work contours Original Technet Description URL Description Download: [Download Link](Download\High Level Schedule Creation.zip)  Output from Technet Gallery Picture this: You are handed a project charter, complete with a scope statement detailed enough to include top-down resource-level estimates of the work required to deliver the product. Your organization has also defined how much time any given resource can devote to projects to account for reserving time to “keeping the lights running”.</description>
+    </item>
+    
+    <item>
+      <title>How to Branding Project Server 2010(PWA) site  with SharePoint Designer 2010</title>
+      <link>/project-server/how-to-branding-pwa-with-3f4c9a89/how-to-branding-pwa-with-3f4c9a89/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/how-to-branding-pwa-with-3f4c9a89/how-to-branding-pwa-with-3f4c9a89/</guid>
+      <description>Original Links  Original Technet URL How to Branding Project Server 2010(PWA) site with SharePoint Designer 2010 Original Technet Description URL Description Download: Not available.  Output from Technet Gallery By default &amp;ldquo;PWA site has been configured to disallow editing with SharePoint Designer&amp;rdquo;
+required to do some configuration manualy.
+Removing the DisableWebDesignFeatures=&amp;quot;wdfopensite&amp;rdquo; from ONET.xml of the PWA site which is at C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates\PWA\XML and do a iisreset.</description>
+    </item>
+    
+    <item>
+      <title>How to track task progress based on the change (mutation) moment.</title>
+      <link>/project-server/track-task-dates-based-on-2dedfe7c/track-task-dates-based-on-2dedfe7c/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/track-task-dates-based-on-2dedfe7c/track-task-dates-based-on-2dedfe7c/</guid>
+      <description>Original Links  Original Technet URL How to track task progress based on the change (mutation) moment. Original Technet Description URL Description Download: Not available.  Output from Technet Gallery MS Project is one of the most advanced project planning systems. Nevertheless, consider this situation: a project manager asks you - how many tasks where completed today? you cannot answer this basis question out of the reporting database. Too crazy ?</description>
+    </item>
+    
+    <item>
+      <title>imesheet Status Report: Table form including Not Yet Created status</title>
+      <link>/project-server/timesheet-status-report-37b95da2/timesheet-status-report-37b95da2/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/timesheet-status-report-37b95da2/timesheet-status-report-37b95da2/</guid>
+      <description>Original Links  Original Technet URL imesheet Status Report: Table form including Not Yet Created status Original Technet Description URL Description Download: [Download Link](Download\Timesheet Status Report.docx)  Output from Technet Gallery This document will describe to you how to create a Timesheet Status Report in a filterable and sortable table format which include timesheets in a status of Not Yet Created&amp;hellip; something Project Online reporting does not deliver. The report gathers the Not Yet Created criteria from the base capacity a resource have in a given week.</description>
+    </item>
+    
+    <item>
+      <title>Importance of a Logo for a Business</title>
+      <link>/project-server/importance-of-a-logo-for-a-26889556/importance-of-a-logo-for-a-26889556/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/importance-of-a-logo-for-a-26889556/importance-of-a-logo-for-a-26889556/</guid>
+      <description>Original Links  Original Technet URL Importance of a Logo for a Business Original Technet Description URL Description Download: Not available.  Output from Technet Gallery If you own a successful business and do not have a logo yet, your business must be in doubts for the future. A logo adds worth to your product or service. The old school strategies might have worked for your business for all these years but in the coming few years, they will not do any good to your business.</description>
+    </item>
+    
+    <item>
+      <title>Keep Project Online data in sync with SharePoint lis</title>
+      <link>/project-server/keep-online-data-in-sync-06a1bf8d/keep-online-data-in-sync-06a1bf8d/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/keep-online-data-in-sync-06a1bf8d/keep-online-data-in-sync-06a1bf8d/</guid>
+      <description>Original Links  Original Technet URL Keep Project Online data in sync with SharePoint lis Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to get all of the published projects in the Project Online PWA Site Collection, then for each project it will create / update a list item on the specified SharePoint list. The user setting up the script will need to update the source PWA instance URL, username, password and list name.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Flow to Sync Roadmap item and Project Online task status</title>
+      <link>/project-server/flow-to-sync-roadmap-item-44174a4b/flow-to-sync-roadmap-item-44174a4b/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/flow-to-sync-roadmap-item-44174a4b/flow-to-sync-roadmap-item-44174a4b/</guid>
+      <description>Original Links  Original Technet URL Microsoft Flow to Sync Roadmap item and Project Online task status Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Microsoft Flow package can be imported into your Microsoft Flow environment as a solution starter. The Flow trigger and Actions will need updates to connect to your target environments as these will currently be linked to a Microsoft Demo instance the Flow was exported from.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Project Easy Menus</title>
+      <link>/project-server/easy-menus-d4f6d943/easy-menus-d4f6d943/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/easy-menus-d4f6d943/easy-menus-d4f6d943/</guid>
+      <description>Original Links  Original Technet URL Microsoft Project Easy Menus Original Technet Description URL Description Download: [Download Link](Download\Project Easy Ribbon.exportedUI)  Output from Technet Gallery Project Easy Menus Project Easy Menus are a customised CUI file that simplify the menu experience in Microsoft Project in two ways.
+  The menu tabs relate to your current project management process (project creation, project execution or project reporting) rather than Microsoft&amp;rsquo;s functional areas of tasks, resources, views etc.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Project Online Content Pack with Danish, Polish, Russian &amp; Ukrainian</title>
+      <link>/project-server/online-power-bi-content-26306fa6/online-power-bi-content-26306fa6/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-power-bi-content-26306fa6/online-power-bi-content-26306fa6/</guid>
+      <description>Original Links  Original Technet URL Microsoft Project Online Content Pack with Danish, Polish, Russian &amp;amp; Ukrainian Original Technet Description URL Description Download: [Download Link](Download\MS Content Pack with Additional Languages.pbit)  Output from Technet Gallery Project Online Content Pack with additional language support for Danish, Polish, Russian and Ukrainian This is the standard Microsoft Project Online Power BI content pack, but with support for PWA instances created in either Russion or Ukrainian.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Project Online Power BI Content Pack - Weekly Timescal</title>
+      <link>/project-server/online-power-bi-content-190f4013/online-power-bi-content-190f4013/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-power-bi-content-190f4013/online-power-bi-content-190f4013/</guid>
+      <description>Original Links  Original Technet URL Microsoft Project Online Power BI Content Pack - Weekly Timescal Original Technet Description URL Description Download: [Download Link](Download\Microsoft Project Online Power BI Content Pack - Weekly.pbit)  Output from Technet Gallery Based on the Project Online PowerBI content pack v2 provided by Microsoft in November 2017, this updated version proposes aweekly timescale. The TIMESET table has been updated with the week dimension (format YYYY-WW). Both time dimensions are available (month and week).</description>
+    </item>
+    
+    <item>
+      <title>Monitor Project Server Queue from data</title>
+      <link>/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/</guid>
+      <description>Original Links  Original Technet URL Monitor Project Server Queue from data Original Technet Description URL Description Download: Not available.  Output from Technet Gallery SQL
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149  -- CODE BY PLANSIS.</description>
+    </item>
+    
+    <item>
+      <title>MS Project recovery tool for .MPP files, named Recovery Toolbox for Proj</title>
+      <link>/project-server/ms-recovery-tool-for-mpp-f44115b8/ms-recovery-tool-for-mpp-f44115b8/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/ms-recovery-tool-for-mpp-f44115b8/ms-recovery-tool-for-mpp-f44115b8/</guid>
+      <description>Original Links  Original Technet URL MS Project recovery tool for .MPP files, named Recovery Toolbox for Proj Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Recovery Toolbox for Project represents an easy MS Project file recovery tool utility to open and analyze corrupted MPP files. After the analysis, this data can be exported into clean files of Microsoft Project format.
+Full descriptions with screenshots, video, manuals available here:https://project.</description>
+    </item>
+    
+    <item>
+      <title>Overview of Microsoft Solution Framework (MSF)</title>
+      <link>/project-server/overview-of-solution-7582bb06/overview-of-solution-7582bb06/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/overview-of-solution-7582bb06/overview-of-solution-7582bb06/</guid>
+      <description>Original Links  Original Technet URL Overview of Microsoft Solution Framework (MSF) Original Technet Description URL Description Download: [Download Link](Download\Brief overview on Microsoft Solution Framework.ppsx)  Output from Technet Gallery Overview of Microsoft Solution Framework
+..is a approach for successfully delivering technology solution faster with fewer people and less risk while enabling higher quality result -MSDN.
+Discussion of below topics of Microsoft solution framework (MSF) :
+  Principle of Microsoft Solution Framework</description>
+    </item>
+    
+    <item>
+      <title>PC Budget templa</title>
+      <link>/project-server/the-tpc-budget-template-1978c92d/the-tpc-budget-template-1978c92d/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/the-tpc-budget-template-1978c92d/the-tpc-budget-template-1978c92d/</guid>
+      <description>Original Links  Original Technet URL PC Budget templa Original Technet Description URL Description Download: [Download Link](Download\TPC Budget template files.zip)  Output from Technet Gallery The files in this zip file are related to the Project Corner Blog article about Budget templates. It includes a manual that will help you on your way as well as a example file and the actual MS Project Budget Template. The files can be used for ease in creating a budget within projects.</description>
+    </item>
+    
+    <item>
+      <title>Planner Charts</title>
+      <link>/project-server/planner-charts-56ca3ac4/planner-charts-56ca3ac4/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/planner-charts-56ca3ac4/planner-charts-56ca3ac4/</guid>
+      <description>Original Links  Original Technet URL Planner Charts Original Technet Description URL Description Download: Download Link  Output from Technet Gallery //Update - March 2020// - All dates are now of type Date meaning you can create your own DAX calcs between the dates and the labels are split into 6 separate columns.
+//Update - February 2020// - The charts now support the priority field and additional charts have been created to display the tasks by priority and a decomposition tree.</description>
+    </item>
+    
+    <item>
+      <title>Power BI report that shows all files in Project Onlin</title>
+      <link>/project-server/power-bi-report-that-shows-f7988eff/power-bi-report-that-shows-f7988eff/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/power-bi-report-that-shows-f7988eff/power-bi-report-that-shows-f7988eff/</guid>
+      <description>Original Links  Original Technet URL Power BI report that shows all files in Project Onlin Original Technet Description URL Description Download: [Download Link](Download\PWA Files.zip)  Output from Technet Gallery I created this file to get a clear view on how many documents, of what type and size are in a project online environment. The report uses power bi and the invoke custom function method to grab all project site urls and with some changes generate a nice little report that helps you analyse your environment.</description>
+    </item>
+    
+    <item>
+      <title>PowerShell Migrating Projrect Server 2013 to Project Project 2016 Beta 2</title>
+      <link>/project-server/powershell-migrating-145e356d/powershell-migrating-145e356d/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/powershell-migrating-145e356d/powershell-migrating-145e356d/</guid>
+      <description>Original Links  Original Technet URL PowerShell Migrating Projrect Server 2013 to Project Project 2016 Beta 2 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The PowerShell script provides the steps for migrating Project Server content databases and project database to Project Server 2016 technical preview beta 2.
+There is no error checking and skipping steps if steps have already been done. For example,if an application pool is already created and you run the script again, the script will error when trying to recreate.</description>
+    </item>
+    
+    <item>
+      <title>Powershell script to publish multiple projects - Project Server 2010</title>
+      <link>/project-server/powershell-script-to-3b839594/powershell-script-to-3b839594/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/powershell-script-to-3b839594/powershell-script-to-3b839594/</guid>
+      <description>Original Links  Original Technet URL Powershell script to publish multiple projects - Project Server 2010 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Ever see a requirement when you need to publish multiple projects (Note that &amp;lsquo;Not All&amp;rsquo; and &amp;lsquo;Not Specific One&amp;rsquo;) and that list of projects should be fetched through SQL query based on some JOINS and WHERE conditions?Here is the way..
+PFA the powershell script file(PublishMultipleProjects.</description>
+    </item>
+    
+    <item>
+      <title>Powershell script to replace Project Owner</title>
+      <link>/project-server/powershell-script-to-6c485008/powershell-script-to-6c485008/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/powershell-script-to-6c485008/powershell-script-to-6c485008/</guid>
+      <description>Original Links  Original Technet URL Powershell script to replace Project Owner Original Technet Description URL Description Download: Download Link  Output from Technet Gallery There are situations when a project manager leaves or moves to a different area within the organization and someone else is taking over his/her projects. This Powershell scriptfinds the projects owned by the old project manager and replaces the owner with the new project manager.</description>
+    </item>
+    
+    <item>
+      <title>Project 2010 PERT Add-in</title>
+      <link>/project-server/2010-pert-add-in-1db7552a/2010-pert-add-in-1db7552a/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/2010-pert-add-in-1db7552a/2010-pert-add-in-1db7552a/</guid>
+      <description>Original Links  Original Technet URL Project 2010 PERT Add-in Original Technet Description URL Description Download: [Download Link](Download\PERT Addin 2010.zip)  Output from Technet Gallery – English –
+After several requests and questions where was the PERT analysis in Project 2010, I decided to create an Add-in to fill this lack.
+The Add-in is multilingual, supports Portuguese, Spanish, Italian and English.
+To install, just unzip the file and click “Setup.exe” file.</description>
+    </item>
+    
+    <item>
+      <title>Project 2013 PERT Addin</title>
+      <link>/project-server/2013-pert-addin-1f460074/2013-pert-addin-1f460074/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/2013-pert-addin-1f460074/2013-pert-addin-1f460074/</guid>
+      <description>Original Links  Original Technet URL Project 2013 PERT Addin Original Technet Description URL Description Download: [Download Link](Download\PERT Addin 2013.zip)  Output from Technet Gallery – English –
+After several requests and questions where was the PERT analysis in Project 2013, I decided to create an Add-in to fill this lack.
+The Add-in is multilingual, supports Portuguese, Spanish, Italian and English.
+To install, just unzip the file and click “Setup.exe” file.</description>
+    </item>
+    
+    <item>
+      <title>Project 2016 PERT Add-in</title>
+      <link>/project-server/2016-pert-add-in-97c7e785/2016-pert-add-in-97c7e785/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/2016-pert-add-in-97c7e785/2016-pert-add-in-97c7e785/</guid>
+      <description>Original Links  Original Technet URL Project 2016 PERT Add-in Original Technet Description URL Description Download: [Download Link](Download\PERT Addin 2016.zip)  Output from Technet Gallery – English –
+After several requests and questions where was the PERT analysis in Project 2016, I decided to create an Add-in to fill this lack.
+The Add-in is multilingual, supports Portuguese, Spanish, Italian and English.
+To install, just unzip the file and click “Setup.exe” file.</description>
+    </item>
+    
+    <item>
+      <title>Project 2016 unit tests for data consistency after a migration or dry run</title>
+      <link>/project-server/2016-unit-tests-for-data-1e518340/2016-unit-tests-for-data-1e518340/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/2016-unit-tests-for-data-1e518340/2016-unit-tests-for-data-1e518340/</guid>
+      <description>Original Links  Original Technet URL Project 2016 unit tests for data consistency after a migration or dry run Original Technet Description URL Description Download: [Download Link](Download\unittests project 2016 migration.sql)  Output from Technet Gallery this sql script allows quickly check data consistency at serveral carefully selected points (tests) between two ms project databases. This is handy to do after a migration from 2010 to 2013 or 2016 when you want to quickly test consistency of data between the old and the new environment.</description>
+    </item>
+    
+    <item>
+      <title>Project and Project Online Power BI Report Pack</title>
+      <link>/project-server/and-online-power-bi-report-d1fbca1b/and-online-power-bi-report-d1fbca1b/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/and-online-power-bi-report-d1fbca1b/and-online-power-bi-report-d1fbca1b/</guid>
+      <description>Original Links  Original Technet URL Project and Project Online Power BI Report Pack Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI file contains reports for Microsoft&amp;rsquo;s Office 365 Project application that is built on the CDS and Project Online. This example report pack enables customers who use both Project (CDS) and Project Online to view data from both applications in one report.</description>
+    </item>
+    
+    <item>
+      <title>Project Burn and Forecast Repor</title>
+      <link>/project-server/burn-and-forecast-report-5e0f4b89/burn-and-forecast-report-5e0f4b89/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/burn-and-forecast-report-5e0f4b89/burn-and-forecast-report-5e0f4b89/</guid>
+      <description>Original Links  Original Technet URL Project Burn and Forecast Repor Original Technet Description URL Description Download: [Download Link](Download\Project Burn and Forecast Report.zip)  Output from Technet Gallery The User Guide for the Contoso Project Burn and Forecast Report demonstrates how to use the Project Burn and Forecast Report to estimate the projected spend rate (“Average Monthly Burn Rate”) based on the current spend plan, and it also allows you to forecast a spend plan based on a what-if spend rate in a budget-reduction scenario.</description>
+    </item>
+    
+    <item>
+      <title>Project Online - Add Related Projects To A Custom Field</title>
+      <link>/project-server/online-add-related-e6a69a02/online-add-related-e6a69a02/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-add-related-e6a69a02/online-add-related-e6a69a02/</guid>
+      <description>Original Links  Original Technet URL Project Online - Add Related Projects To A Custom Field Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript solution starter enables you to select projects that are related and add those project names to a project level custom field all from a Project Detail Page. The script will need updating to reference the correct project level field internal name, but this is covered in the supporting blog post.</description>
+    </item>
+    
+    <item>
+      <title>Project Online - PWA Stats and Snapsho</title>
+      <link>/project-server/online-pwa-stats-and-eb56e6bb/online-pwa-stats-and-eb56e6bb/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-pwa-stats-and-eb56e6bb/online-pwa-stats-and-eb56e6bb/</guid>
+      <description>Original Links  Original Technet URL Project Online - PWA Stats and Snapsho Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript solution starter enables you to view certain stats for your PWA data such as Total Projects, In Progress, Late In Progress, Active Issues, Active Risks etc. It also enables the data to be captured in a SharePoint list on the PWA site to enable simple trend reporting.</description>
+    </item>
+    
+    <item>
+      <title>Project Online / Project Server &#39;Project on a page&#39;</title>
+      <link>/project-server/online-server-on-a-page-1b1f14f5/online-server-on-a-page-1b1f14f5/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-server-on-a-page-1b1f14f5/online-server-on-a-page-1b1f14f5/</guid>
+      <description>Original Links  Original Technet URL Project Online / Project Server &amp;lsquo;Project on a page&amp;rsquo; Original Technet Description URL Description Download: [Download Link](Download\Projectonapage on project site.js)  Output from Technet Gallery This JavaScript file displays project information on the associated Project Site in Project Server 2013 / Project Online. The script will display project information, project milestones, active issues and active risks on one page. A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Project Online / Project Server - View Resource Calendar Exceptions</title>
+      <link>/project-server/online-server-view-20760922/online-server-view-20760922/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-server-view-20760922/online-server-view-20760922/</guid>
+      <description>Original Links  Original Technet URL Project Online / Project Server - View Resource Calendar Exceptions Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This JavaScript file enables the user to see the Resource Calendar Exceptions in Project Online / Project Server 2013. The example script can be added to a page in the PWA site collection using a content editor web part. A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Project Online / Project Server 2013/16/19 - access SharePoint lists on a PDP</title>
+      <link>/project-server/online-server-2013-access-627b10ef/online-server-2013-access-627b10ef/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-server-2013-access-627b10ef/online-server-2013-access-627b10ef/</guid>
+      <description>Original Links  Original Technet URL Project Online / Project Server 2013/16/19 - access SharePoint lists on a PDP Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables the user to access the SharePoint Issues and Risks lists in Project Online / Project Server 2013. The example script is added to a Project Detail Page in the PWA site collection using a content editor web part.</description>
+    </item>
+    
+    <item>
+      <title>Project Online / Project Server PDP tabs</title>
+      <link>/project-server/online-server-pdp-tabs-c8012555/online-server-pdp-tabs-c8012555/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-server-pdp-tabs-c8012555/online-server-pdp-tabs-c8012555/</guid>
+      <description>Original Links  Original Technet URL Project Online / Project Server PDP tabs Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript solution starter enables you to display your Project Online Project Detail Pages (PDP) web parts on tabs. The code will need updating to work for your Project Online configuration as you will have different PDPs on the page. It is very simple to update.</description>
+    </item>
+    
+    <item>
+      <title>Project Online / Project Server update Name description on PDP</title>
+      <link>/project-server/online-server-update-name-0f8bd826/online-server-update-name-0f8bd826/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-server-update-name-0f8bd826/online-server-update-name-0f8bd826/</guid>
+      <description>Original Links  Original Technet URL Project Online / Project Server update Name description on PDP Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables you to change the Project Name field description on the Project Detail Pages to display a different description such as &amp;ldquo;Enter a name for the project&amp;rdquo;.
+The script does require a jQuery library to work - these are detailed on the blog post below.</description>
+    </item>
+    
+    <item>
+      <title>Project Online / Project Server update Owner label on PDP</title>
+      <link>/project-server/online-server-update-owner-7ef2671a/online-server-update-owner-7ef2671a/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-server-update-owner-7ef2671a/online-server-update-owner-7ef2671a/</guid>
+      <description>Original Links  Original Technet URL Project Online / Project Server update Owner label on PDP Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript file enables you to change the Owner field / label on the Project Detail Pages to display a different label such as Project Manager.
+The script does require a jQuery library to work - these are detailed on the blog post below.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Content Pack with Dynamic Row Level Security</title>
+      <link>/project-server/online-content-pack-with-64761eb9/online-content-pack-with-64761eb9/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-content-pack-with-64761eb9/online-content-pack-with-64761eb9/</guid>
+      <description>Original Links  Original Technet URL Project Online Content Pack with Dynamic Row Level Security Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This content packs builds on Microsoft&amp;rsquo;s release for Project Online and adds in Dynamic Row Level Security. When fully configured this automatically filters the content pack to display only the projects owned by the viewer. Further details are availalbe here. Please note at the time of publishing a Power BI Pro licence is required to enable the Row Level Security feature.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Power BI Project Compliance Report Pack</title>
+      <link>/project-server/online-power-bi-compliance-b45b657c/online-power-bi-compliance-b45b657c/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-power-bi-compliance-b45b657c/online-power-bi-compliance-b45b657c/</guid>
+      <description>Original Links  Original Technet URL Project Online Power BI Project Compliance Report Pack Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI file contains reports for Microsoft&amp;rsquo;s Office 365 PPM tool Project Online. This report pack contains reports to help check that your projects are compliant. There is a summary page to give an overview across projects then a detailed page for the selected project.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Power BI Report Pack v1</title>
+      <link>/project-server/online-power-bi-report-de969b81/online-power-bi-report-de969b81/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-power-bi-report-de969b81/online-power-bi-report-de969b81/</guid>
+      <description>Original Links  Original Technet URL Project Online Power BI Report Pack v1 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI file contains reports for Microsoft&amp;rsquo;s office 365 PPM tool Project Online. This is the first release of the report pack, I plan to update this in the near future and publish later versions. The report connections will need to be updated to access the target PWA instance, these steps for updating the parameter are covered in the supporting blog post here:</description>
+    </item>
+    
+    <item>
+      <title>Project Online Power BI Report Pack v2</title>
+      <link>/project-server/online-power-bi-report-abcb3c3b/online-power-bi-report-abcb3c3b/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-power-bi-report-abcb3c3b/online-power-bi-report-abcb3c3b/</guid>
+      <description>Original Links  Original Technet URL Project Online Power BI Report Pack v2 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI file contains reports for Microsoft&amp;rsquo;s Office 365 PPM tool Project Online. This is the second version of the report pack. The report connections will need to be updated to access the target PWA instance, these steps for updating the parameter are covered in the supporting blog post here:</description>
+    </item>
+    
+    <item>
+      <title>Project Online Project Level HTML fields to SP Lis</title>
+      <link>/project-server/online-level-html-fields-5dc31a38/online-level-html-fields-5dc31a38/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-level-html-fields-5dc31a38/online-level-html-fields-5dc31a38/</guid>
+      <description>Original Links  Original Technet URL Project Online Project Level HTML fields to SP Lis Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to get all of the published projects in the Project Online PWA Site Collection, then for each project it will get the project level multiple lines of text fields that include the HTML from the REST API and then create a list item on the specified SharePoint list.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Project User Sync to Project Si</title>
+      <link>/project-server/online-user-sync-to-7a75ef77/online-user-sync-to-7a75ef77/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-user-sync-to-7a75ef77/online-user-sync-to-7a75ef77/</guid>
+      <description>Original Links  Original Technet URL Project Online Project User Sync to Project Si Original Technet Description URL Description Download: [Download Link](Download\ProjectOnline - SyncProjectTeamtoProjectSite.ps1)  Output from Technet Gallery This solution starter PowerShell script will add the users from the project team into the associated Project Site in Project Online. The solution starter example will action this for the specified project. For production use this could easily be made dynamic to iterate over all / specified projects and project sites.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Snapshot example with PowerShell</title>
+      <link>/project-server/online-snapshot-example-0437b680/online-snapshot-example-0437b680/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-snapshot-example-0437b680/online-snapshot-example-0437b680/</guid>
+      <description>Original Links  Original Technet URL Project Online Snapshot example with PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will use the Project Reporting OData API to get all of the specified project data in the PWA Site Collection then create a list item on the specified SharePoint list. The user setting up the script will need to update the source PWA instance URL, username, password and list name.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Timesheet Excel Repor</title>
+      <link>/project-server/online-timesheet-excel-3b165651/online-timesheet-excel-3b165651/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-timesheet-excel-3b165651/online-timesheet-excel-3b165651/</guid>
+      <description>Original Links  Original Technet URL Project Online Timesheet Excel Repor Original Technet Description URL Description Download: [Download Link](Download\Project Online Timesheet Report.zip)  Output from Technet Gallery This file contains an Excel template that provides Timesheet reporting for Project Online. The report uses the standard oData feed and provides the ability to filter by Timesheet Period, Resource Name and Project Name. Details of how to enter the correct URL for the oData feed are included in the download, alongside the Excel template.</description>
+    </item>
+    
+    <item>
+      <title>Project Online Work and Capacity Graphs</title>
+      <link>/project-server/online-work-and-capacity-30a67204/online-work-and-capacity-30a67204/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/online-work-and-capacity-30a67204/online-work-and-capacity-30a67204/</guid>
+      <description>Original Links  Original Technet URL Project Online Work and Capacity Graphs Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI template file provides resource work and capacity charts for Project Online resources. It makes use of a DAX measure to ensure a full set of contiguous timephased work values and hence provides for readable line charts. Combined with a filter based upon resource names it&amp;rsquo;s easy to see when resources are overloaded!</description>
+    </item>
+    
+    <item>
+      <title>Project Online/Server 2013: Timephased Work Management with CSOM - Starter Ki</title>
+      <link>/project-server/onlineserver-2013-e1950d29/onlineserver-2013-e1950d29/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/onlineserver-2013-e1950d29/onlineserver-2013-e1950d29/</guid>
+      <description>Original Links  Original Technet URL Project Online/Server 2013: Timephased Work Management with CSOM - Starter Ki Original Technet Description URL Description Download: [Download Link](Download\Neos-SDI Project Online Starter Kit.zip)  Output from Technet Gallery This project illustrates how to use Project Server 2013 CSOM for:
+  Reading Project and Tasks
+  Adding Tasks, and Timephased Assignment
+  Adding Timephased Actual on Assignment
+   It&amp;rsquo;s a simple console application, and work on Project Online, as well as Project On Prem.</description>
+    </item>
+    
+    <item>
+      <title>Project Power BI Report Pack</title>
+      <link>/project-server/power-bi-report-pack-4506f183/power-bi-report-pack-4506f183/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/power-bi-report-pack-4506f183/power-bi-report-pack-4506f183/</guid>
+      <description>Original Links  Original Technet URL Project Power BI Report Pack Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI file contains reports for Microsoft&amp;rsquo;s Office 365 Project application that is built on the CDS. The report connections will need to be updated to access the target Project CDS environment. Set the CDSUrl parameter to the default Dynamics CDS org as this is where Project is deployed.</description>
+    </item>
+    
+    <item>
+      <title>Project Roadmap Power BI Report Pack</title>
+      <link>/project-server/roadmap-power-bi-report-8eaae91e/roadmap-power-bi-report-8eaae91e/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/roadmap-power-bi-report-8eaae91e/roadmap-power-bi-report-8eaae91e/</guid>
+      <description>Original Links  Original Technet URL Project Roadmap Power BI Report Pack Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI file contains reports for Microsoft&amp;rsquo;s Office 365 Project Online Project Roadmap feature. The report connections will need to be updated to access the target Project Roadmap CDS environment, these steps for updating the parameter are covered in the supporting blog post here:</description>
+    </item>
+    
+    <item>
+      <title>Project Server / Project Online Project Cost and Work Report Exampl</title>
+      <link>/project-server/server-online-cost-and-83bbff27/server-online-cost-and-83bbff27/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-online-cost-and-83bbff27/server-online-cost-and-83bbff27/</guid>
+      <description>Original Links  Original Technet URL Project Server / Project Online Project Cost and Work Report Exampl Original Technet Description URL Description Download: [Download Link](Download\Projects Cost and Work - Charts.js)  Output from Technet Gallery This JavaScript file enables the user to see project cost and work on a column chart in Project Online / Project Server 2013. The example script can be added to a page in the PWA site collection using a content editor web part.</description>
+    </item>
+    
+    <item>
+      <title>Project Server / Project Online Project Site Finder</title>
+      <link>/project-server/server-online-finder-56968921/server-online-finder-56968921/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-online-finder-56968921/server-online-finder-56968921/</guid>
+      <description>Original Links  Original Technet URL Project Server / Project Online Project Site Finder Original Technet Description URL Description Download: [Download Link](Download\Project Site Finder.js)  Output from Technet Gallery This JavaScript file enables the user to quickly find / navigate to the Project Site in Project Server 2013 / Project Online. The script can be added to the PWA site collection, for example on the PWA homepage for easy access. A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2010 / 2013 - Publish all projects</title>
+      <link>/project-server/server-2010-publish-all-45ba385b/server-2010-publish-all-45ba385b/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2010-publish-all-45ba385b/server-2010-publish-all-45ba385b/</guid>
+      <description>Original Links  Original Technet URL Project Server 2010 / 2013 - Publish all projects Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will publish all projects in Project Server when run with an account that is an administrator in Project Server. This can either be run on demand or set to run on a schedule using the Windows Task Scheduler. If you want all projects to be published, run on demand / set the windows scheduled task to run using the Project Server adminstrator account.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2010 / 2013 - Publish single project by UID</title>
+      <link>/project-server/server-2010-2013-publish-a8772725/server-2010-2013-publish-a8772725/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2010-2013-publish-a8772725/server-2010-2013-publish-a8772725/</guid>
+      <description>Original Links  Original Technet URL Project Server 2010 / 2013 - Publish single project by UID Original Technet Description URL Description Download: [Download Link](Download\PUBLISH BY UID EXAMPLE.PS1)  Output from Technet Gallery Windows Shell Script
+1 2 3  $svcPSProxy = New-WebServiceProxy -uri &amp;#34;http://[your PWA project before/default.asmx]/_vti_bin/PSI/Project.asmx?wsdl&amp;#34; -useDefaultCredential $job = [system.guid]::NewGuid() $svcPSProxy.QueuePublish($job, &amp;#34;put UID hier e.g. 4A2A5C24-E5EF-4196-A227-0A69DCA6CF8F&amp;#34;, &amp;#34;true&amp;#34;,&amp;#34;&amp;#34;)   In case you want to publish on project server just a single project by using it PROJECTUID UID, this powershell script is a good one.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2010 / 2013 - Publish specified projects</title>
+      <link>/project-server/server-2010-publish-537857d8/server-2010-publish-537857d8/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2010-publish-537857d8/server-2010-publish-537857d8/</guid>
+      <description>Original Links  Original Technet URL Project Server 2010 / 2013 - Publish specified projects Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will publish the projects specified in a text file. The projects will be published to Project Server when run with an account that has access to the specified projects in Project Server. This can either be run on demand or set to run on a schedule using the Windows Task Scheduler.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2010 / 2013 High-level Audit Export exampl</title>
+      <link>/project-server/server-2010-high-level-e9c6ad09/server-2010-high-level-e9c6ad09/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2010-high-level-e9c6ad09/server-2010-high-level-e9c6ad09/</guid>
+      <description>Original Links  Original Technet URL Project Server 2010 / 2013 High-level Audit Export exampl Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script accesses the Project Server queue data and exports this into a text file in the specified location. Execute the script on a daily schedule using the Windows Task Scheduler to capture high-level audit details for Project Server. The script will need to be updated with the correct export location (filename variable) and the correct PWA URL in the WebServiceProxy.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2010 Bulk Edit Tool</title>
+      <link>/project-server/server-2010-bulk-edit-tool-688f4dea/server-2010-bulk-edit-tool-688f4dea/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2010-bulk-edit-tool-688f4dea/server-2010-bulk-edit-tool-688f4dea/</guid>
+      <description>Original Links  Original Technet URL Project Server 2010 Bulk Edit Tool Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Changing custom fields or other project fields for a single project is easy using Project Professional or PWA. Changing the same fields on multiple projects, however, can be a challenge. Using either Project Professional or PWA, each project must be edited individually, making “bulk editing” a tedious and time consuming task.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2010/2013: Delete projects based on SQL query</title>
+      <link>/project-server/server-20102013-delete-e1e416bc/server-20102013-delete-e1e416bc/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-20102013-delete-e1e416bc/server-20102013-delete-e1e416bc/</guid>
+      <description>Original Links  Original Technet URL Project Server 2010/2013: Delete projects based on SQL query Original Technet Description URL Description Download: Download Link  Output from Technet Gallery 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67  &amp;lt;# .</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2013 / Project Online Publish all projects</title>
+      <link>/project-server/server-2013-online-publish-15215a56/server-2013-online-publish-15215a56/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2013-online-publish-15215a56/server-2013-online-publish-15215a56/</guid>
+      <description>Original Links  Original Technet URL Project Server 2013 / Project Online Publish all projects Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This JavaScript file can be added to a Project Web App page to enable the user to publish all projects they have access to in one go. This will work for Project Server 2013 and Project Online. A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2013 add tasks to multiple projects from CSV Fil</title>
+      <link>/project-server/server-2013-add-tasks-to-72c2697a/server-2013-add-tasks-to-72c2697a/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2013-add-tasks-to-72c2697a/server-2013-add-tasks-to-72c2697a/</guid>
+      <description>Original Links  Original Technet URL Project Server 2013 add tasks to multiple projects from CSV Fil Original Technet Description URL Description Download: [Download Link](Download\Project Server 2013-AddNamedTaskstoProjectFromCSV.ps1)  Output from Technet Gallery This borrows from Jim E. Cox&amp;rsquo;s work. You will need to create an MSDOS CSV File for this (Not a comma delimited file)
+As is this is designed for only 2 columns Column 1 is the project GUID and Column 2 is the task name.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2013 Audit Export with automated maintenance for multiple PWAs</title>
+      <link>/project-server/server-2013-audit-export-c2d7f4f3/server-2013-audit-export-c2d7f4f3/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2013-audit-export-c2d7f4f3/server-2013-audit-export-c2d7f4f3/</guid>
+      <description>Original Links  Original Technet URL Project Server 2013 Audit Export with automated maintenance for multiple PWAs Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script is higly inspired by the sample uploaded by PWMather. It was sent and recommended to me by a Microsoft engineer working on one of our cases.
+I did however have a few problems with just copying and pasting it to production.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2013 build OLAP Cub</title>
+      <link>/project-server/server-2013-build-olap-cube-13a4346c/server-2013-build-olap-cube-13a4346c/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2013-build-olap-cube-13a4346c/server-2013-build-olap-cube-13a4346c/</guid>
+      <description>Original Links  Original Technet URL Project Server 2013 build OLAP Cub Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will fire a cube build job. Using this script will bypass the need for users to access Central Admin to build an OLAP cube. The user running the script will still require the correct Project Server permissions to build a cube.
+A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2013: delete unneeded project versions from archiv</title>
+      <link>/project-server/server-2013-delete-1cc1b567/server-2013-delete-1cc1b567/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2013-delete-1cc1b567/server-2013-delete-1cc1b567/</guid>
+      <description>Original Links  Original Technet URL Project Server 2013: delete unneeded project versions from archiv Original Technet Description URL Description Download: Download Link  Output from Technet Gallery 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  &amp;lt;# .</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2013: restore projects from archive databas</title>
+      <link>/project-server/server-2013-restore-2f4b686b/server-2013-restore-2f4b686b/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2013-restore-2f4b686b/server-2013-restore-2f4b686b/</guid>
+      <description>Original Links  Original Technet URL Project Server 2013: restore projects from archive databas Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script was created as a fix for the issue of lost custom field values with projects migrated from Project Server 2010 after update to March 2015 PU
+(see: https://social.technet.microsoft.com/Forums/projectserver/en-US/040f1f3b-3214-4f5f-89c3-a73ee1421d94/project-custom-field-values-lost-on-save-with-march-2015-pu-for-project-professional-2013?forum=projserv2010setup)
+One workaround to prevent a project from loosing its custom field values when it is edited next time is to get the last version back from the archive (ver.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2016 Configurator Script (Auto Installer)</title>
+      <link>/project-server/powershell-script-to-9993a79d/powershell-script-to-9993a79d/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/powershell-script-to-9993a79d/powershell-script-to-9993a79d/</guid>
+      <description>Original Links  Original Technet URL Project Server 2016 Configurator Script (Auto Installer) Original Technet Description URL Description Download: [Download Link](Download\Project Server 2016 Configurator Script.zip)  Output from Technet Gallery PowerShell Script to Configure Project Server 2016 Introduction **Project Server 2016 Configurator Script (Auto Installer)&amp;rdquo; **will help you to configure the Project Server 2016 easily through the below functions.
+#1 - Register Managed Accounts.
+#2 - Enable Project Server 2016 License.</description>
+    </item>
+    
+    <item>
+      <title>Project Server 2016: PowerShell to publish projects using SQL and RES</title>
+      <link>/project-server/server-2016-powershell-to-50d7d34c/server-2016-powershell-to-50d7d34c/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-2016-powershell-to-50d7d34c/server-2016-powershell-to-50d7d34c/</guid>
+      <description>Original Links  Original Technet URL Project Server 2016: PowerShell to publish projects using SQL and RES Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This version of a publish projects script is targeted for a Project Server 2016 on premises instance.
+It will query the SQL database for a list of projects that should be published. I use SQL for easy selection of projects using various parameters like custom fields or last published date.</description>
+    </item>
+    
+    <item>
+      <title>Project Server Corrupt Enterprise Resources / Cannot Publish a Resour</title>
+      <link>/project-server/server-corrupt-enterprise-6e8325fe/server-corrupt-enterprise-6e8325fe/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-corrupt-enterprise-6e8325fe/server-corrupt-enterprise-6e8325fe/</guid>
+      <description>Original Links  Original Technet URL Project Server Corrupt Enterprise Resources / Cannot Publish a Resour Original Technet Description URL Description Download: Not available.  Output from Technet Gallery This is issue related to enterprise resources. If you select a resource in PWA and open it in Project Professional you cannot save these resources or publish. You will see a message &amp;ldquo;Internal Error&amp;rdquo; or similar for the resources.
+Other symptoms</description>
+    </item>
+    
+    <item>
+      <title>Project Server Project Information displayed on the Project Si</title>
+      <link>/project-server/server-information-ab10fd63/server-information-ab10fd63/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-information-ab10fd63/server-information-ab10fd63/</guid>
+      <description>Original Links  Original Technet URL Project Server Project Information displayed on the Project Si Original Technet Description URL Description Download: [Download Link](Download\project information on project site.js)  Output from Technet Gallery This JavaScript file displays the project level fields on the associated Project Site in Project Server 2013 / Project Online. This script will display the following default fields:
+  Project Name
+  Project Description
+  Project Owner</description>
+    </item>
+    
+    <item>
+      <title>Project Server Project Milestones displayed on the Project Si</title>
+      <link>/project-server/server-milestones-f8be71b8/server-milestones-f8be71b8/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-milestones-f8be71b8/server-milestones-f8be71b8/</guid>
+      <description>Original Links  Original Technet URL Project Server Project Milestones displayed on the Project Si Original Technet Description URL Description Download: [Download Link](Download\project milestones on project site.js)  Output from Technet Gallery This JavaScript file displays the project milestones on the associated Project Site in Project Server 2013 / Project Online. The script will display the Milestone name, Finish Date and % complete. A code snippet can be seen below:</description>
+    </item>
+    
+    <item>
+      <title>Project Server Queue Monitor</title>
+      <link>/project-server/server-queue-monitor-01bcdb74/server-queue-monitor-01bcdb74/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-queue-monitor-01bcdb74/server-queue-monitor-01bcdb74/</guid>
+      <description>Original Links  Original Technet URL Project Server Queue Monitor Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script can be used as a scheduled task to monitor the Project Server Job Queue for unsuccessful jobs. The admin will receive an email when a minimum number of unsuccessful jobs is reached. This allows a Project Server admin to be notified of any issues with the queue without having to manually check in PWA.</description>
+    </item>
+    
+    <item>
+      <title>Project Server Risks and Issues on a Project Detail Pag</title>
+      <link>/project-server/server-risks-and-issues-on-65dcbe0e/server-risks-and-issues-on-65dcbe0e/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-risks-and-issues-on-65dcbe0e/server-risks-and-issues-on-65dcbe0e/</guid>
+      <description>Original Links  Original Technet URL Project Server Risks and Issues on a Project Detail Pag Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This JavaScript file will display the assiciated Risks and Issues on a Project Detail Page in Project Server 2013 / Project Online. By default the script only uses the default columns from the Project Server / Project Online Issues and Risks Project Site lists so that the script will work for all Project Server 2013 / Project Online deployments.</description>
+    </item>
+    
+    <item>
+      <title>Project Server: Administrative backup on a custom schedul</title>
+      <link>/project-server/server-administrative-a2cbaa40/server-administrative-a2cbaa40/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-administrative-a2cbaa40/server-administrative-a2cbaa40/</guid>
+      <description>Original Links  Original Technet URL Project Server: Administrative backup on a custom schedul Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Project Server achives the projects on a daily basis. One particular project is archived only if it has been updated since previous archive.
+There are situations where you may want your archive/administrative backup to run on weekly/monthly basis and to include all projects (no matter if they have been changed) and that&amp;rsquo;s what the script does.</description>
+    </item>
+    
+    <item>
+      <title>Project Server: PowerShell script to force a checkin of all checkedout projects</title>
+      <link>/project-server/server-powershell-script-981812c2/server-powershell-script-981812c2/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/server-powershell-script-981812c2/server-powershell-script-981812c2/</guid>
+      <description>Original Links  Original Technet URL Project Server: PowerShell script to force a checkin of all checkedout projects Original Technet Description URL Description Download: Download Link  Output from Technet Gallery 1  .\SOLVIN_EasyCheckin.ps1 -ProjectServerURL http://projectserver/pwa -DatabaseServer SQLSRV1 -DraftDB PWA_Draft   The attached script reads all checkedout projects from the draft database and sends checkin requests to the specified Project Server instance.
+Example:
+.\SOLVIN_EasyCheckin.ps1 -ProjectServerURL http://projectserver/pwa -DatabaseServer SQLSRV1 -DraftDB PWA_Draft</description>
+    </item>
+    
+    <item>
+      <title>Project Spend Repor</title>
+      <link>/project-server/spend-report-86e15e11/spend-report-86e15e11/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/spend-report-86e15e11/spend-report-86e15e11/</guid>
+      <description>Original Links  Original Technet URL Project Spend Repor Original Technet Description URL Description Download: [Download Link](Download\Project Spend Report.zip)  Output from Technet Gallery The Contoso Project Spend Report User Guide walks you through using the Project Spend Report particularly the use of a key concept &amp;ndash; a unifying Expense Code, to track Project Total Actual Cost. The Total Actual Cost is then categorized into its component costs by project work alongside sustainment and common services activities maintained in associated projects in lieu of Administrative Time and Timesheet entries in order to facilitate cost categorization by Expense Code.</description>
+    </item>
+    
+    <item>
+      <title>Project Work by Day Power BI Exampl</title>
+      <link>/project-server/work-by-day-power-bi-6d1b71f4/work-by-day-power-bi-6d1b71f4/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/work-by-day-power-bi-6d1b71f4/work-by-day-power-bi-6d1b71f4/</guid>
+      <description>Original Links  Original Technet URL Project Work by Day Power BI Exampl Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This Power BI template shows an example for reporting on Project for the Web assignment work day by day. Project for the Web is Microsoft&amp;rsquo;s Office 365 Project application that is built on the CDS. The report connections will need to be updated to access the target Project CDS environment.</description>
+    </item>
+    
+    <item>
+      <title>Protecting Baseline Fields in Proj</title>
+      <link>/project-server/protecting-baseline-fields-514f6345/protecting-baseline-fields-514f6345/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/protecting-baseline-fields-514f6345/protecting-baseline-fields-514f6345/</guid>
+      <description>Original Links  Original Technet URL Protecting Baseline Fields in Proj Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Baseline refers to approved estimates. After you have set the baseline in Project, the approved estimates can be displayed by inserting the Baseline fields such as Baseline Start, Baseline Finish, Baseline Work, Baseline Cost and Baseline Duration. Depending on the view these columns are inserted, Project can either display the approved estimates of tasks, resources or assignments.</description>
+    </item>
+    
+    <item>
+      <title>Provision Project Server 2016</title>
+      <link>/project-server/provision-server-2016-72debf0e/provision-server-2016-72debf0e/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/provision-server-2016-72debf0e/provision-server-2016-72debf0e/</guid>
+      <description>Original Links  Original Technet URL Provision Project Server 2016 Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Provisioning project server is not as easily as it was in the past. SharePoint Central does not include a menu option in project servers to create, edit and remove a PWA site. The PowerShell scripts are examples of several ways to provision project server 2016.
+PowerShell shows several ways to provision from the ROOT or multiple PWA sites such as PWA, PWA2 and PWAOOB.</description>
+    </item>
+    
+    <item>
+      <title>PS script to check if a Project is not Published and act accordingly</title>
+      <link>/project-server/ps-script-to-check-if-a-is-658eb260/ps-script-to-check-if-a-is-658eb260/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/ps-script-to-check-if-a-is-658eb260/ps-script-to-check-if-a-is-658eb260/</guid>
+      <description>Original Links  Original Technet URL PS script to check if a Project is not Published and act accordingly Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script uses the Project Server Interface (PSI), that is available from Project Server 2003 and future versions (2007, 2010, 2013, Online), to check if the Project Plan is Saved and Published or just only Saved.
+It does this comparing the column PROJ_LAST_SAVED from datasets retrieved from the Publish and Draft databases, or on newer versions from Publish and Draft Schemas of the Database.</description>
+    </item>
+    
+    <item>
+      <title>Publish All Projects in Project Online using PowerShell</title>
+      <link>/project-server/publish-all-projects-in-ad8ee80e/publish-all-projects-in-ad8ee80e/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/publish-all-projects-in-ad8ee80e/publish-all-projects-in-ad8ee80e/</guid>
+      <description>Original Links  Original Technet URL Publish All Projects in Project Online using PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script publishes all projects in a Project Web App instance of Project Online. This is useful to ensure that Project Status Reports are showing most uptodate data.
+The pre-requisites to run this script are
+ Copy SharePoint &amp;amp; Project Server CSOM DLLs  Download SharePoint &amp;amp; Project Server CSOM Dlls from the nuget https://www.</description>
+    </item>
+    
+    <item>
+      <title>Publish Project Server Resource Plans</title>
+      <link>/project-server/publish-server-resource-6bea9da4/publish-server-resource-6bea9da4/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/publish-server-resource-6bea9da4/publish-server-resource-6bea9da4/</guid>
+      <description>Original Links  Original Technet URL Publish Project Server Resource Plans Original Technet Description URL Description Download: Download Link  Output from Technet Gallery 1  .\SOLVIN_ResPlan_EasyPublish.ps1 [-ProjectServerURL] &amp;lt;String&amp;gt; [-DatabaseServer] &amp;lt;String&amp;gt; [-ReportingDB] &amp;lt;String&amp;gt; [[-WhereClause] &amp;lt;String&amp;gt;] [&amp;lt;CommonParameters&amp;gt;]   Publishes a specified list of project resource plans in Microsoft Project Server 2010 or 2013
+The list of projects is queried from the Project Server (reporting) database by a query connecting to the standard MSP_EPMProject_UserView.</description>
+    </item>
+    
+    <item>
+      <title>Register custom Event Handlers in Project Server 2010/2013 (on premise)</title>
+      <link>/project-server/register-custom-event-7c85c962/register-custom-event-7c85c962/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/register-custom-event-7c85c962/register-custom-event-7c85c962/</guid>
+      <description>Original Links  Original Technet URL Register custom Event Handlers in Project Server 2010/2013 (on premise) Original Technet Description URL Description Download: Download Link  Output from Technet Gallery If you have a many event handlers or a lot of servers (dev, int, test, acc, &amp;hellip; , prod) or the person who has to deploy your custom event handlers is less experienced. It can be interesting to have a little script to do this enoying work for you.</description>
+    </item>
+    
+    <item>
+      <title>Report on Project Online Project Site list data</title>
+      <link>/project-server/report-on-online-list-data-f5cbf73f/report-on-online-list-data-f5cbf73f/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/report-on-online-list-data-f5cbf73f/report-on-online-list-data-f5cbf73f/</guid>
+      <description>Original Links  Original Technet URL Report on Project Online Project Site list data Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This simple JavaScript solution starter enables you to report on data from Project Site lists. It uses the SharePoint REST API so it is possible to update the script so that custom columns can be included or design the report around a custom list on the Project Site.</description>
+    </item>
+    
+    <item>
+      <title>Retrieve project permissions via SQL</title>
+      <link>/project-server/retrieve-permissions-via-f5ba6daa/retrieve-permissions-via-f5ba6daa/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/retrieve-permissions-via-f5ba6daa/retrieve-permissions-via-f5ba6daa/</guid>
+      <description>Original Links  Original Technet URL Retrieve project permissions via SQL Original Technet Description URL Description Download: Download Link  Output from Technet Gallery SQL
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41  --2010 version SELECT proj_name as project,r.</description>
+    </item>
+    
+    <item>
+      <title>Sort Project Server Timesheet Line Classifications in Add an existing task pag</title>
+      <link>/project-server/sort-server-timesheet-line-d2634985/sort-server-timesheet-line-d2634985/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/sort-server-timesheet-line-d2634985/sort-server-timesheet-line-d2634985/</guid>
+      <description>Original Links  Original Technet URL Sort Project Server Timesheet Line Classifications in Add an existing task pag Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Hi,
+I was thinking of uploading this solution earlier when I was struggling to get Project Server 2010 timesheet line classification sorted in ascending order under &amp;ldquo;Add an existing task&amp;rdquo; dialogue box. But due to stretch assignments got delayed but as said it&amp;rsquo;s always good to be late then never :) :)</description>
+    </item>
+    
+    <item>
+      <title>SQL Query to find out list of Projects belongs to which PPM Security Group</title>
+      <link>/project-server/sql-query-to-find-out-list-9c7fedad/sql-query-to-find-out-list-9c7fedad/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/sql-query-to-find-out-list-9c7fedad/sql-query-to-find-out-list-9c7fedad/</guid>
+      <description>Original Links  Original Technet URL SQL Query to find out list of Projects belongs to which PPM Security Group Original Technet Description URL Description Download: [Download Link](Download\SQL Query to find out which Projects belongs to which Project Security Group.docx)  Output from Technet Gallery In a nutshell this is a query to get the Project name quoted in a security category.
+When you add manually several projects to a specific Project Server category, for authorization purpose, you need to check this list.</description>
+    </item>
+    
+    <item>
+      <title>Step By Step to create a Power BI report from an oData feed without Excel</title>
+      <link>/project-server/step-by-step-to-create-a-3eb81a31/step-by-step-to-create-a-3eb81a31/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/step-by-step-to-create-a-3eb81a31/step-by-step-to-create-a-3eb81a31/</guid>
+      <description>Original Links  Original Technet URL Step By Step to create a Power BI report from an oData feed without Excel Original Technet Description URL Description Download: [Download Link](Download\Step By Step to create a Power BI report without Excel.docx)  Output from Technet Gallery This article will walk you through a step-by-step procedure on creating a Power BI report from an oData feed without Excel.
+We recently had a lot of new announcements about PowerBI, embedding components such as Power Pivot, Power Query, Power Map, enabling auto refresh, etc&amp;hellip; So I decided to roll up my sleeves and get into it with my new Project Online demo tenant.</description>
+    </item>
+    
+    <item>
+      <title>Step by Step to create your own carousel on the PWA home pag</title>
+      <link>/project-server/step-by-step-to-create-9d4c06a8/step-by-step-to-create-9d4c06a8/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/step-by-step-to-create-9d4c06a8/step-by-step-to-create-9d4c06a8/</guid>
+      <description>Original Links  Original Technet URL Step by Step to create your own carousel on the PWA home pag Original Technet Description URL Description Download: [Download Link](Download\Step by Step to create your own carousel on the PWA home page.docx)  Output from Technet Gallery Step by Step to create your own carousel on the PWA home page:
+The PWA homepage is really user friendly and pleasant to use since the carousels and tiles have been introduced in Project Server 2013 and Project Online.</description>
+    </item>
+    
+    <item>
+      <title>SuperFlow for Microsoft Project Server 2010 Upgrad</title>
+      <link>/project-server/superflow-for-server-2010-494bf02f/superflow-for-server-2010-494bf02f/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/superflow-for-server-2010-494bf02f/superflow-for-server-2010-494bf02f/</guid>
+      <description>Original Links  Original Technet URL SuperFlow for Microsoft Project Server 2010 Upgrad Original Technet Description URL Description Download: Download Link  Output from Technet Gallery The Microsoft Project Server 2010 Upgrade SuperFlow is a special kind of help file that provides you with information that you need to upgrade to Microsoft Project Server 2010. It provides information that is common to each upgrade path – planning, preparation, and specific procedures for each supported upgrade method.</description>
+    </item>
+    
+    <item>
+      <title>Update Project Online Project Custom Field Value Using PowerShell</title>
+      <link>/project-server/update-online-custom-field-12f034f4/update-online-custom-field-12f034f4/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/update-online-custom-field-12f034f4/update-online-custom-field-12f034f4/</guid>
+      <description>Original Links  Original Technet URL Update Project Online Project Custom Field Value Using PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will connect to the Project Online PWA instance, import data from a CSV file then update the appropriate projects with the data from the CSV file. This demonstrates a simple example for importing the project budget value from a CSV file into a project level custom field in Project Online.</description>
+    </item>
+    
+    <item>
+      <title>Update Project Online Resource Pool with Azure AD user attributes</title>
+      <link>/project-server/update-online-resource-83137b7f/update-online-resource-83137b7f/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/update-online-resource-83137b7f/update-online-resource-83137b7f/</guid>
+      <description>Original Links  Original Technet URL Update Project Online Resource Pool with Azure AD user attributes Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This PowerShell script will connect to Azure AD and export all the users to a CSV file with the specified attributes. Then the script will connect to the Project Online PWA instance, import data from a CSV file then update the appropriate resources with the data from the CSV file into the specified custom field.</description>
+    </item>
+    
+    <item>
+      <title>Update Project Server 2010 / 2013 Lookup table with values from a text fil</title>
+      <link>/project-server/update-server-lookup-table-bb1ae14f/update-server-lookup-table-bb1ae14f/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/update-server-lookup-table-bb1ae14f/update-server-lookup-table-bb1ae14f/</guid>
+      <description>Original Links  Original Technet URL Update Project Server 2010 / 2013 Lookup table with values from a text fil Original Technet Description URL Description Download: [Download Link](Download\Update Project Server lookup table.ps1)  Output from Technet Gallery This PowerShell script will add lookup table values from a text file into the specified lookup table. This script does assume that the lookup table values are all level 1. The values to add will need to be in a list in a text file, an example can be found on the blog post link below.</description>
+    </item>
+    
+    <item>
+      <title>Update Project Server- Project Custom Field and Lookup Value Using PowerShell</title>
+      <link>/project-server/update-server-custom-field-00ab99a9/update-server-custom-field-00ab99a9/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/update-server-custom-field-00ab99a9/update-server-custom-field-00ab99a9/</guid>
+      <description>Original Links  Original Technet URL Update Project Server- Project Custom Field and Lookup Value Using PowerShell Original Technet Description URL Description Download: Download Link  Output from Technet Gallery Based on the script provided by PWMather, on Update Project Online Project Custom Field Value Using PowerShell with CSV
+The Approach he provided only addresses a single field with a single line of text data type.
+This is fine, as it does what is required, but i wanted to be able to update Lookup fields as well as bulk updating Multiple filed at the same time.</description>
+    </item>
+    
+    <item>
+      <title>Use SharePoint people pickers on Project Server or Online PDPs</title>
+      <link>/project-server/use-sharepoint-people-cc8289de/use-sharepoint-people-cc8289de/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/use-sharepoint-people-cc8289de/use-sharepoint-people-cc8289de/</guid>
+      <description>Original Links  Original Technet URL Use SharePoint people pickers on Project Server or Online PDPs Original Technet Description URL Description Download: Download Link  Output from Technet Gallery PDP People Picking Project Server PDPs (Project Detail Pages) have the facility to host Project level enterprise custom fields for users to edit. Out-of-the-box Project Server supports Cost, Date, Duration, Flag, Number and Text - but not fields of type Person.</description>
+    </item>
+    
+    <item>
+      <title>Whiteboard Process-Making A SUCCESSFUL Video STEP by STEP</title>
+      <link>/project-server/whiteboard-process-making-1fbe7a17/whiteboard-process-making-1fbe7a17/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/whiteboard-process-making-1fbe7a17/whiteboard-process-making-1fbe7a17/</guid>
+      <description>Original Links  Original Technet URL Whiteboard Process-Making A SUCCESSFUL Video STEP by STEP Original Technet Description URL Description Download: Not available.  Output from Technet Gallery From beginning to end, here is the whiteboard animation procedure for making your own video:
+**Stage 1: Define Your Goals **
+You need to ask yourself; what are the results you expect or the goals you need to achieve.
+Listing down the goals that you have in your mind, For instance, &amp;lsquo;if you need to build the client change rate on the landing page&amp;rsquo; or if you need to expand the transformation rate by 20% on your social media platform.</description>
+    </item>
+    
+    <item>
+      <title>Why Use Microsoft Project Server?</title>
+      <link>/project-server/why-use-server-f4f3b684/why-use-server-f4f3b684/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/why-use-server-f4f3b684/why-use-server-f4f3b684/</guid>
+      <description>Original Links  Original Technet URL Why Use Microsoft Project Server? Original Technet Description URL Description Download: [Download Link](Download\Project Server.png)  Output from Technet Gallery Project Server is built on Microsoft SharePoint Server, bringing together powerful business collaboration platform services with structured execution capabilities to provide flexible work management solutions.
+Now more than ever, executives are being challenged to &amp;ldquo;do more with less&amp;rdquo; and as a result have to be judicious about where they spend their money and how they allocate their resources.</description>
+    </item>
+    
+    <item>
+      <title>Windows Server 2016 Technical Preview 5 - Overview</title>
+      <link>/project-server/windows-server-2016-262acfbe/windows-server-2016-262acfbe/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/windows-server-2016-262acfbe/windows-server-2016-262acfbe/</guid>
+      <description>Original Links  Original Technet URL Windows Server 2016 Technical Preview 5 - Overview Original Technet Description URL Description Download: [Download Link](Download\Win 2016 TP5 - Overview.docx)  Output from Technet Gallery This Guide will help You to understand:
+  Windows Server 2016 TP5 Console overview.
+  Changes done with Roles &amp;amp; features.
+  This is start for Windows Server 2016&amp;hellip; Now with next Guide, I will start sharing individual features guide with complete evaluation &amp;amp; testing.</description>
+    </item>
+    
+    <item>
+      <title>Windows Server 2016 TP5 - About Guest Clustering &amp; Expanding Shared VHD Onlin</title>
+      <link>/project-server/windows-server-2016-tp5-b621f59c/windows-server-2016-tp5-b621f59c/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
+      
+      <guid>/project-server/windows-server-2016-tp5-b621f59c/windows-server-2016-tp5-b621f59c/</guid>
+      <description>Original Links  Original Technet URL Windows Server 2016 TP5 - About Guest Clustering &amp;amp; Expanding Shared VHD Onlin Original Technet Description URL Description Download: [Download Link](Download\Windows Server 2016 TP5 - About Guest Clustering &amp;amp; Expanding Shared VHD Online (New feature).docx)  Output from Technet Gallery This document will give You brief description:
+  About Guest Clustering
+  Prerequisites
+  Installation &amp;amp; Configuration.
+  How to create shared VHD in Win 2016 (New Feature).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Monitor Project Server Queue from data - LoveIt</title><meta name="Description" content="About LoveIt Theme"><meta property="og:title" content="Monitor Project Server Queue from data" />
+<meta property="og:description" content="Original Links  Original Technet URL Monitor Project Server Queue from data Original Technet Description URL Description Download: Not available.  Output from Technet Gallery SQL
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149  -- CODE BY PLANSIS." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2019-12-01T21:57:40+08:00" />
+<meta property="article:modified_time" content="2020-01-01T16:45:40+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="Monitor Project Server Queue from data"/>
+<meta name="twitter:description" content="Original Links  Original Technet URL Monitor Project Server Queue from data Original Technet Description URL Description Download: Not available.  Output from Technet Gallery SQL
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149  -- CODE BY PLANSIS."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" /><link rel="prev" href="/project-server/ms-recovery-tool-for-mpp-f44115b8/ms-recovery-tool-for-mpp-f44115b8/" /><link rel="next" href="/project-server/online-power-bi-content-190f4013/online-power-bi-content-190f4013/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Monitor Project Server Queue from data",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/project-server\/monitor-server-queue-from-44555dc1\/monitor-server-queue-from-44555dc1\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "Project Server","keywords": "Active Directory, HTML","wordcount":  1609 ,
+        "url": "\/project-server\/monitor-server-queue-from-44555dc1\/monitor-server-queue-from-44555dc1\/","datePublished": "2019-12-01T21:57:40+08:00","dateModified": "2020-01-01T16:45:40+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Maxim Ivashkov"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="LoveIt"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/archive/"> Archive </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/printing/"> Printing </a><a class="menu-item" href="/project-server/"> Project Server </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="LoveIt"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/archive/" title="">Archive</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/printing/" title="">Printing</a><a class="menu-item" href="/project-server/" title="">Project Server</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Monitor Project Server Queue from data</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Maxim Ivashkov</a></span>&nbsp;<span class="post-category">included in <a href="/categories/project-server/"><i class="far fa-folder fa-fw"></i>Project Server</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-01">2019-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1609 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;<span id="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" class="leancloud_visitors" data-flag-title="Monitor Project Server Queue from data">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#original-links">Original Links</a></li>
+    <li><a href="#output-from-technet-gallery">Output from Technet Gallery</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="original-links">Original Links</h2>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> Original Technet URL <a href="https://gallery.technet.microsoft.com/Monitor-Server-Queue-from-44555dc1" target="_blank" rel="noopener noreffer">Monitor Project Server Queue from data</a></li>
+<li><i class="far fa-check-square fa-fw"></i> Original Technet Description URL <a href="https://gallery.technet.microsoft.com/Monitor-Server-Queue-from-44555dc1/description" target="_blank" rel="noopener noreffer">Description</a></li>
+<li><i class="far fa-check-square fa-fw"></i> Download: Not available.</li>
+</ul>
+<h2 id="output-from-technet-gallery">Output from Technet Gallery</h2>
+<p>SQL</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- CODE BY PLANSIS.NL
+SELECT DISTINCT QPG.GRP_QUEUE_ID as &#39;Queue ID&#39;,
+ case when qpg.GRP_QUEUE_STATE = 8 then &#39;Blocked Due To A Failed Job&#39;
+  when qpg.GRP_QUEUE_STATE = 9 then &#39;Cancelled&#39;
+  when qpg.GRP_QUEUE_STATE = 5 then &#39;Failed And Blocking Correlation&#39;
+  when qpg.GRP_QUEUE_STATE = 6 then &#39;Failed But Not Blocking Correlation&#39;
+  when qpg.GRP_QUEUE_STATE = 2 then &#39;Getting Queued&#39;
+  when qpg.GRP_QUEUE_STATE = 3 then &#39;Processing&#39;
+  when qpg.GRP_QUEUE_STATE = 7 then &#39;Skipped For Optimization&#39;
+  when qpg.GRP_QUEUE_STATE = 4 then &#39;Success&#39;
+  when qpg.GRP_QUEUE_STATE = 1 then &#39;Waiting To Be Processed&#39;
+  when qpg.GRP_QUEUE_STATE = 10 then &#39;Waiting to be Processed (On Hold)&#39;
+  when qpg.GRP_QUEUE_STATE = 12 then &#39;Waiting to be Processed (Ready for Launch)&#39;
+  when qpg.GRP_QUEUE_STATE = 11 then &#39;Waiting to be Processed (Sleeping)&#39;
+ End as &#39;Job State&#39;,
+  case
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 1 then &#39;Project Save from Project Professional &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 2 then &#39;Active Directory Sync (Enterprise Resource Pool)&#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 3 then &#39;Active Directory Sync (Group)&#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 5 then &#39;Archive Custom Fields &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 6 then &#39;Archive Global Project &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 7 then &#39;Archive Resources &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 8 then &#39;Archive System Settings &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 9 then &#39;Archive Project Web App Views &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 4 then &#39;Archive Security Categories &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 10 then &#39;Priority Bump &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 11 then &#39;Internal (CBS Project Rendezvous) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 12 then &#39;OLAP Database Build &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 13 then &#39;Internal (CBS Timesheet Rendezvous) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 15 then &#39;Project Site Create &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 16 then &#39;Project Site Delete &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 18 then &#39;Notifications &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 19 then &#39;Archive Project &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 20 then &#39;Archive and Delete Project&#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 21 then &#39;Project Checkin &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 22 then &#39;Project Create &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 23 then &#39;Project Delete &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 24 then &#39;Project Publish &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 25 then &#39;Project Rename &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 28 then &#39;Project Update from PSI &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 29 then &#39;Project Update Team &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 30 then &#39;Project Publish Notifications &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 31 then &#39;Queue Cleanup &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 32 then &#39;Reporting (Attribute Settings Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 33 then &#39;Reporting (Base Calendar Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 34 then &#39;Reporting (Custom Field Metadata Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 35 then &#39;Reporting (Entity User View Refresh) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 36 then &#39;Reporting (Fiscal Periods Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 37 then &#39;Reporting (Lookup Table Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 38 then &#39;Reporting (Project Delete) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 39 then &#39;Reporting (Project Publish) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 49 then &#39;Reporting (Project Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 41 then &#39;Reporting (Resource Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 40 then &#39;Reporting (Resources Capacity Range Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 42 then &#39;Reporting (Timesheet Adjust) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 43 then &#39;Reporting (Timesheet Class Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 44 then &#39;Reporting (Timesheet Delete) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 45 then &#39;Reporting (Time Reporting Period Delete) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 46 then &#39;Reporting (Time Reporting Period Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 47 then &#39;Reporting (Timesheet Save) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 48 then &#39;Reporting (Timesheet Status Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 50 then &#39;Resource Plan Checkin &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 51 then &#39;Resource Plan Delete &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 52 then &#39;Resource Plan Publish &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 53 then &#39;Resource Plan Save &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 55 then &#39;Restore Custom Fields &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 56 then &#39;Restore Global Project &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 26 then &#39;Restore Project &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 59 then &#39;Restore Project Web App Views &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 57 then &#39;Restore Resources &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 54 then &#39;Restore Security Categories &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 58 then &#39;Restore System Settings &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 60 then &#39;Status Update Rules (Process All) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 61 then &#39;Status Update Rules (Auto-run Rules) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 62 then &#39;Status Update Rules (Run All Rules) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 63 then &#39;Status Update Rules (Run Single Rule) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 64 then &#39;Status Update &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 65 then &#39;Internal (Timer1) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 66 then &#39;Internal (Timer10) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 67 then &#39;Internal (Timer2) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 68 then &#39;Internal (Timer3) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 69 then &#39;Internal (Timer4) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 70 then &#39;Internal (Timer5) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 71 then &#39;Internal (Timer6) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 72 then &#39;Internal (Timer7) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 73 then &#39;Internal (Timer8) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 74 then &#39;Internal (Timer9) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 75 then &#39;Internal (Timer Message) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 76 then &#39;Internal (Timer Rendezvous Notify) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 77 then &#39;Internal (Timer Rendezvous Project ) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 78 then &#39;Internal (Timer Rendezvous Timesheet) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 79 then &#39;Timesheet Message &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 80 then &#39;Timesheet Delete &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 81 then &#39;Timesheet Recall &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 82 then &#39;Timesheet Review &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 83 then &#39;Timesheet Submit &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 84 then &#39;Timesheet Update &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 85 then &#39;Reporting (Global Data Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 86 then &#39;Project Site Membership Synchronization &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 87 then &#39;User Synchronization for Project Web App App Root Site and Project Sites &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 88 then &#39;Reporting Database Refresh &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 89 then &#39;Update Scheduled Project &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 90 then &#39;Start Workflow &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 91 then &#39;Analysis Delete&#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 92 then &#39;Analysis Create&#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 93 then &#39;Analysis Update&#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 94 then &#39;Planner Portfolio Selection Scenario Create &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 95 then &#39;Planner Portfolio Selection Scenario Delete &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 96 then &#39;Optimizer Portfolio Selection Scenario Create &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 97 then &#39;Optimizer Portfolio Selection Scenario Delete &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 98 then &#39;Timesheet Line Approval &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 100 then &#39;Project Detail Pages Update Project Impact Values &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 101 then &#39;Exchange Server Task Sync &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 102 then &#39;Reporting (Attribute Departments Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 103 then &#39;Reporting (Timesheet Project Aggregation) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 104 then &#39;Reporting (Timesheet Assignments Upgrade) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 105 then &#39;Project Workflow Check-in &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 106 then &#39;Change Workflow &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 107 then &#39;Project Publish Summary &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 108 then &#39;Reporting (OLAP Database Settings Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 109 then &#39;Reporting (Workflow Metadata Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 110 then &#39;Reporting (Enterprise Project Type and Workflow Information Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 111 then &#39;Reporting (Enterprise Project Type Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 112 then &#39;Reporting (Project Summary Publish) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 113 then &#39;Reporting (Committed Portfolio Selection Scenarios Decision Sync) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 114 then &#39;Project Workflow Commit &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 115 then &#39;Reporting (Timesheet Assignments Refresh) &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 116 then &#39;Update Project Site Path &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 117 then &#39;User Synchronization (Add Operation) for Project Web App App Root Site and Project Sites &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 118 then &#39;User Synchronization (Delete Operation) for Project Web App App Root Site and Project Sites &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 119 then &#39;Timesheet Update Resource &#39;
+  when qpg.GRP_QUEUE_MESSAGE_TYPE = 120 then &#39;Update Scheduled Project &#39;
+ End as &#39;Job Type&#39;,
+ P.PROJ_NAME ,
+ RES.RES_NAME as &#39;Resource Name&#39;,
+ QPG.GRP_QUEUE_PRIORITY as &#39;Queue Priority&#39;,
+ QPG.PERCENT_COMPLETE as &#39;Percent Complete&#39;,
+ QPG.CREATED_DATE as &#39;Entry Time&#39;,
+ QPG.COMPLETED_DATE as &#39;Completed Time&#39;
+ ,datediff(s, QPG.[CREATED_DATE] ,QPG.processing_date) as WAITTIME_SEC
+ ,datediff(s, QPG.processing_date ,QPG.[COMPLETED_DATE]) as DURATION_SEC
+ from dbo.MSP_QUEUE_PROJECT_GROUP_FULL_VIEW QPG (NOLOCK)
+ left outer join dbo.MSP_PROJECT_RESOURCES_PUBLISHED_VIEW RES (NOLOCK) on qpg.RES_UID = RES.RES_UID
+ left outer join dbo.MSP_PROJECTS P on QPG.JOB_INFO_UID = P.PROJ_UID
+ -- [Comment] use code below to apply extra filters such as Job status (see GRP_QUEUE_STATE codes)
+ --Where QPG.GRP_QUEUE_STATE &lt;&gt; 4
+ --and (DATEDIFF(hour,QPG.COMPLETED_DATE,GETDATE()) &lt; 24 and DATEDIFF(hour,QPG.CREATED_DATE,GETDATE()) &lt; &#39;$TimeInHours&#39;))
+ --or (QPG.COMPLETED_DATE is null)
+ ORDER BY qpg.COMPLETED_DATE Desc
+</code></pre></td></tr></table>
+</div>
+</div><p>Project Server 2010 and 2013 has a built in webpage to filter and view the project server queue jobs. But what if you want to keep this data for analysis or automated wornings?</p>
+<p>The query below will let you get to the same data you see on the queue&rsquo;s webpage. The data comes from views in the DRAFT database. The major trick is to know that INFO_UID is actually your PROJECT_UID. Using this query you can easily filter on specific states  or messages (see the codes) . Use it to spot projects that take long to pubish. You can also spot errors that come from [GRP_QUEUE_ERROR_INFO] field.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-01-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" data-title="Monitor Project Server Queue from data" data-via="xxxx" data-hashtags="Active Directory,HTML"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" data-hashtag="Active Directory"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" data-title="Monitor Project Server Queue from data"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" data-title="Monitor Project Server Queue from data"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="/project-server/monitor-server-queue-from-44555dc1/monitor-server-queue-from-44555dc1/" data-title="Monitor Project Server Queue from data"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/active-directory/">Active Directory</a>,&nbsp;<a href="/tags/html/">HTML</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/project-server/ms-recovery-tool-for-mpp-f44115b8/ms-recovery-tool-for-mpp-f44115b8/" class="prev" rel="prev" title="MS Project recovery tool for .MPP files, named Recovery Toolbox for Proj"><i class="fas fa-angle-left fa-fw"></i>MS Project recovery tool for .MPP files, named Recovery Toolbox for Proj</a>
+            <a href="/project-server/online-power-bi-content-190f4013/online-power-bi-content-190f4013/" class="next" rel="next" title="Microsoft Project Online Power BI Content Pack - Weekly Timescal">Microsoft Project Online Power BI Content Pack - Weekly Timescal<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

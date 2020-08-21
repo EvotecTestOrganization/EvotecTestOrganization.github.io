@@ -1,0 +1,51 @@
+#------------------------------Script#1-------Printsvrback.ps1-----------------------------------------------------------------------
+#---------------Powershell script to backup site server printer config---------------------------------------------------------------
+#----Created by Mano25---------------------------------------------------------------------------------------------------------------
+#----Text file with site server names or IP address.
+$a = Get-Content "C:\Scripts\allservers.txt"
+foreach ($i in $a)
+{ 
+#------------Create c:\printserver_backup folder
+md \\$i\c$\PrintServer_Backup; remove-item -path \\$i\c$\PrintServer_Backup\$i.bak -force; cmd /c "\\$i\c$\windows\system32\spool\tools\printbrm.exe -s \\$i -b -f \\$i\c$\PrintServer_Backup\$i.bak" 
+
+}
+
+#---------------------------------EOF------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+--------------------------------Script#2 to copy config file to HO/off-site server---------------------------------------------------
+#----Text file with site server names or IP address----------------------------------------------------------------------------------
+$a = Get-Content "C:\Scripts\allservers.txt"
+
+foreach ($i in $a)
+   { xcopy /E /Y \\$i\c$\PrintServer_Backup\*.bak \\HOSERVER1\D$\PrintServer_Backup\ >> backup2sim.log}
+#---------------------------------EOF------------------------------------------------------------------------------------------------
+
+
+
+*** Please test it in your lab or non-prod environment first.
+
+*** Use of these scripts are at your own risk.
+
+
+
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+
+OTHER DEALINGS IN THE SOFTWARE.
+

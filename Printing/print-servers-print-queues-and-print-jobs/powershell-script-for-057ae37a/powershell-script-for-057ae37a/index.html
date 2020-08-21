@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam - LoveIt</title><meta name="Description" content="About LoveIt Theme"><meta property="og:title" content="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam" />
+<meta property="og:description" content="Original Links  Original Technet URL PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam Original Technet Description URL Description Download: Download Link  Output from Technet Gallery PowerShell Script for Large Scale Printer Migration with New Printserver and New Share name,
+This script is for medium to large scale printer migration with a different server and print queue name,
+ENVIRONMENT: 1. Existing Printer names has no standards 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2019-12-01T21:57:40+08:00" />
+<meta property="article:modified_time" content="2020-01-01T16:45:40+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam"/>
+<meta name="twitter:description" content="Original Links  Original Technet URL PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam Original Technet Description URL Description Download: Download Link  Output from Technet Gallery PowerShell Script for Large Scale Printer Migration with New Printserver and New Share name,
+This script is for medium to large scale printer migration with a different server and print queue name,
+ENVIRONMENT: 1. Existing Printer names has no standards 2."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" /><link rel="prev" href="/printing/printer-ports-and-printer-drivers/powershell-script-to-69903f6c/powershell-script-to-69903f6c/" /><link rel="next" href="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-76e292a3/powershell-script-for-76e292a3/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PowerShell Script for Large Scale Printer Migration with New server \u0026 Share nam",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/printing\/print-servers-print-queues-and-print-jobs\/powershell-script-for-057ae37a\/powershell-script-for-057ae37a\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "Printing","keywords": "Active Directory, HTML","wordcount":  1064 ,
+        "url": "\/printing\/print-servers-print-queues-and-print-jobs\/powershell-script-for-057ae37a\/powershell-script-for-057ae37a\/","datePublished": "2019-12-01T21:57:40+08:00","dateModified": "2020-01-01T16:45:40+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Imran Pathan (immipathan)"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="LoveIt"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/archive/"> Archive </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/printing/"> Printing </a><a class="menu-item" href="/project-server/"> Project Server </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="LoveIt"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/archive/" title="">Archive</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/printing/" title="">Printing</a><a class="menu-item" href="/project-server/" title="">Project Server</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Imran Pathan (immipathan)</a></span>&nbsp;<span class="post-category">included in <a href="/categories/printing/"><i class="far fa-folder fa-fw"></i>Printing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-01">2019-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1064 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;<span id="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" class="leancloud_visitors" data-flag-title="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#original-links">Original Links</a></li>
+    <li><a href="#output-from-technet-gallery">Output from Technet Gallery</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="original-links">Original Links</h2>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> Original Technet URL <a href="https://gallery.technet.microsoft.com/PowerShell-Script-for-057ae37a" target="_blank" rel="noopener noreffer">PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam</a></li>
+<li><i class="far fa-check-square fa-fw"></i> Original Technet Description URL <a href="https://gallery.technet.microsoft.com/PowerShell-Script-for-057ae37a/description" target="_blank" rel="noopener noreffer">Description</a></li>
+<li><i class="far fa-check-square fa-fw"></i> Download: <a href="Download%5cLARGE_SCALE_PRINTER_MIGRATION.ps1" rel="">Download Link</a></li>
+</ul>
+<h2 id="output-from-technet-gallery">Output from Technet Gallery</h2>
+<p>PowerShell Script for Large Scale Printer Migration with New Printserver and New Share name,</p>
+<p>This script is for medium to large scale printer migration with a different server and print queue name,</p>
+<h1 id="environment-1-existing-printer-names-has-no-standards">ENVIRONMENT: 1. Existing Printer names has no standards</h1>
+<h1 id="2-all-existing-print-servers-are-windows-server-2003-32-bit-os">2. All existing print servers are Windows server 2003 32-bit OS</h1>
+<h1 id="3-each-print-queue-has-individual-model-specific-print-drivers-with-32-bit-and-64-bit-drivers-loaded---we-want-to-use-upd-and-only-3-drivers-to-manage">3. Each Print queue has individual model specific print drivers with 32-bit and 64-bit drivers loaded - we want to use UPD and only 3 drivers to manage</h1>
+<h1 id="4-driver-upgrades-often-caused-many-service-desk-call-due-to-either-new-look-n-feel-or">4. Driver upgrades often caused many Service Desk call due to either new look n feel or</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">################################################################################################################################################
+# NAME:        PowerShell Script for Large Scale Printer Migration with New Printserver and New Share name
+# WRITTEN BY:    Imran Pathan, Toronto
+# GOAL:        This script is for medium to large scale printer migration with a different server and print queue name
+# ENVIRONMENT:    1. Existing Printer names has no standards
+#                2. All existing print servers are Windows server 2003 32-bit OS
+#                3. Each Print queue has individual model specific print drivers with 32-bit and 64-bit drivers loaded - we want to use UPD and only 3 drivers to manage
+#                4. Driver upgrades often caused many Service Desk call due to either new look n feel or missing functionlaity etc
+#                5. 95% of the Client OS now are Windows 7 and 5% are either Windows XP or Windows 8
+# PROJECT PLAN:    Although project has various stages, apart from this script i have mentioned a quick snopsis as to what is requried in order to
+#                make use of this script
+#                1. In our environment we have to Migrate all 10 print servers (print queue) to new server ~400 print queues
+#                &gt; http://technet.microsoft.com/en-us/library/dd379488(WS.10).aspx
+#                2. Rename all the print Queues and update the drivers with custom Universal print drivers with a setting to color control
+#                and default page setup values to duplex for cost saving, most of our fleet is HP and Xerox
+#                &gt; HP Universal Print Driver Series for Windows - Resource Kit - http://h20331.www2.hp.com/Hpsub/cache/576122-0-0-225-121.html
+#                3. I build a below script to run with GPO which will swap the old printer with new respected printers from a
+#                new server and identify which one was default and make the new respected a degault,
+#                run a test plan in virtual environment and capture the screenshots to communicate with business users well in advance
+#                4. Begin the frequent communications at least 2 weeks ahead with users group with what changes to expect and escalate procedure for
+#                issues. Inform and train front line on expected calls and simple solutions.
+#                5. Link the security group filtered GPO for 1 week to target users and measure the scueess rate.
+# REFERANCE I USED:
+#            1. WMI Code Creator v1.0 - http://www.microsoft.com/en-ca/download/details.aspx?id=8572
+#            2. PowerShell Functions and Filters – The basics - http://www.powershellpro.com/powershell-tutorial-introduction/powershell-functions-filters/
+# HOW TO USER MY SCRIPT:
+#            As a Network Admin or Network Engineering GURU ALL YOU NEED TO DO IN MY SCRIPT is build the case by simply replacing the switches;
+#             1. i.e. on line 98 &#34;18HookCommRelation-C&#34; is the old printer name.
+#            2. &#34;\\SRV-PRNT01\HK-01-C1&#34; is the new printer that you want to replace the old printer with.
+#            3. Update and add as many printers you have by copying the syntex and do the correct mapping once, test it in a lab first.
+#            4. Once ready simply link the script to appropriate OU or security group filtered GPO as a User Logon Script.
+#            5. In our case we will link in the same GPO which does the Network Drive Mappings in users section without any secuurity filtering.
+#            6. So as we move on migrating more servers-print queues we willl continue to add the line item in switches secion below.
+#
+# VERSION HISTORY: 1.0
+# 31/Mar/2013 - Initial Stable Release
+# 1/Apr/2013 - Comments updated - Not to Aprilfool you -it works guys...
+# 6/Apr-2013 - Logic to update the default printer updated - All good and script is now final
+############################################################### ENJOY ########################################################
+Clear-Host
+# This procedure adds a new printer
+Function InstallNewPrinter{
+      Param ([string]$currentPrinter, [string]$newPrinter)
+#     Write-Host &#34;CurrentPrinter : &#34; $currentPrinter
+#     Write-Host &#34;New Printer : &#34; $newPrinter
+#     Write-Host &#34;Is Printer Default : &#34; $isDefault
+      #Add new Printer
+      $global:net.AddWindowsPrinterConnection($newPrinter)
+      #Add current printer to the TobeDeleted List
+      $global:PrintersTobeDeleted += $currentPrinter
+}
+# This procedure sets the respected new printer default
+Function SetPrinterDefault{
+Param ([string]$defaultPrinter)
+ #If current printer is default, make the new a default printer
+ $global:net.SetDefaultPrinter($defaultPrinter)
+}
+# This procedure deletes all the old printer which were replaced by this script.
+Function DeleteCurrentPrinters{
+      foreach ($printerTodelete in $global:PrintersTobeDeleted)
+      {
+            $global:net.RemovePrinterConnection($printerTodelete)
+      }
+}
+# Set print server name
+$Printserver = &#34;.&#34;
+# This section will identify all the installed Network printer under logged in users profile using WMI
+$Printers = Get-WMIObject Win32_Printer -computername $Printserver -Filter &#34;Network=True&#34;
+# This is a blank array to store the installed Network printer under logged in users profile and pass it on
+$PrintersTobeDeleted = @()
+$newPrinter = &#34;&#34;
+$defaultPrinter = &#34;&#34;
+if($Printers)
+{
+      # Get Network object
+      $global:net = new-Object -com WScript.Network
+      foreach ($Printer in $Printers)
+      {
+#           Write-Host &#34;Name: &#34; $Printer.Name
+#           Write-Host &#34;Location: &#34; $Printer.Location
+#           Write-Host &#34;Comment: &#34; $Printer.Comment
+#           Write-Host &#34;DriverName: &#34; $Printer.DriverName
+#           Write-Host &#34;Shared: &#34; $Printer.Shared
+#           Write-Host &#34;ShareName: &#34; $Printer.ShareName
+          switch ($Printer.ShareName)
+          {
+              &#34;18HookCommRelation-C&#34; {$newPrinter = &#34;\\SRV-PRNT01\HK-01-C1&#34;}
+              &#34;18HookCommRelation-M&#34; {$newPrinter = &#34;\\SRV-PRNT01\HK-01-M1&#34;}
+              &#34;50BayUSRC-P&#34; {$newPrinter = &#34;\\SRV-PRNT02\UN-14-P1&#34;}
+              &#34;61FrontCompSrvc-M&#34; {$newPrinter = &#34;\\SRV-PRNT03\UN-01-M1&#34;}
+              &#34;61FrontIT-B&#34; {$newPrinter = &#34;\\SRV-PRNT03\UN-01-B1&#34;}
+          }
+          if ($newPrinter -ne &#34;&#34;)
+          {
+                  if ($Printer.Default) {$defaultPrinter = $newPrinter}
+                InstallNewPrinter $Printer.Name $newPrinter
+                $newPrinter = &#34;&#34;
+          }
+      }
+    SetPrinterDefault $defaultPrinter
+       DeleteCurrentPrinters
+}
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-01-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" data-title="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam" data-via="xxxx" data-hashtags="Active Directory,HTML"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" data-hashtag="Active Directory"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" data-title="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" data-title="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-057ae37a/powershell-script-for-057ae37a/" data-title="PowerShell Script for Large Scale Printer Migration with New server &amp; Share nam"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/active-directory/">Active Directory</a>,&nbsp;<a href="/tags/html/">HTML</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/printing/printer-ports-and-printer-drivers/powershell-script-to-69903f6c/powershell-script-to-69903f6c/" class="prev" rel="prev" title="Powershell script to change printer IP address"><i class="fas fa-angle-left fa-fw"></i>Powershell script to change printer IP address</a>
+            <a href="/printing/print-servers-print-queues-and-print-jobs/powershell-script-for-76e292a3/powershell-script-for-76e292a3/" class="next" rel="next" title="Powershell Script for Generate Report of Successfull Print Log in Print Server">Powershell Script for Generate Report of Successfull Print Log in Print Server<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

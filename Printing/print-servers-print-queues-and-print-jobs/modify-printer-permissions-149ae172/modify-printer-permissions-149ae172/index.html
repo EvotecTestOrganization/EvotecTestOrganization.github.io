@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Modify Printer Permissions - LoveIt</title><meta name="Description" content="About LoveIt Theme"><meta property="og:title" content="Modify Printer Permissions" />
+<meta property="og:description" content="Original Links  Original Technet URL Modify Printer Permissions Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script was created to modify the DACL of printer objects. It can be
+used to **add specific permissions orremove **permissions from printers on
+the localhost or a specified server. It accepts access masks, such as
+&ldquo;ManageDocuments&rdquo;, in either text or integer based format.
+Example Usage 1:
+.\Set-PrinterPermissions -ServerName &ldquo;PrintSrv1&rdquo; -AccountName &ldquo;ServerAdmins&rdquo; -AccessMask &ldquo;ManageDocuments&rdquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2019-12-01T21:57:40+08:00" />
+<meta property="article:modified_time" content="2020-01-01T16:45:40+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="Modify Printer Permissions"/>
+<meta name="twitter:description" content="Original Links  Original Technet URL Modify Printer Permissions Original Technet Description URL Description Download: Download Link  Output from Technet Gallery This script was created to modify the DACL of printer objects. It can be
+used to **add specific permissions orremove **permissions from printers on
+the localhost or a specified server. It accepts access masks, such as
+&ldquo;ManageDocuments&rdquo;, in either text or integer based format.
+Example Usage 1:
+.\Set-PrinterPermissions -ServerName &ldquo;PrintSrv1&rdquo; -AccountName &ldquo;ServerAdmins&rdquo; -AccessMask &ldquo;ManageDocuments&rdquo;"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" /><link rel="prev" href="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-b3a3770e/modify-printer-permissions-b3a3770e/" /><link rel="next" href="/printing/print-servers-print-queues-and-print-jobs/3c3bebe5-5303-42d8-970d-f8919e5261a9/3c3bebe5-5303-42d8-970d-f8919e5261a9/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Modify Printer Permissions",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/printing\/print-servers-print-queues-and-print-jobs\/modify-printer-permissions-149ae172\/modify-printer-permissions-149ae172\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "Printing","keywords": "Active Directory, HTML","wordcount":  1758 ,
+        "url": "\/printing\/print-servers-print-queues-and-print-jobs\/modify-printer-permissions-149ae172\/modify-printer-permissions-149ae172\/","datePublished": "2019-12-01T21:57:40+08:00","dateModified": "2020-01-01T16:45:40+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "danubel"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="LoveIt"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/archive/"> Archive </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/printing/"> Printing </a><a class="menu-item" href="/project-server/"> Project Server </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="LoveIt"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/archive/" title="">Archive</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/printing/" title="">Printing</a><a class="menu-item" href="/project-server/" title="">Project Server</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Modify Printer Permissions</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>danubel</a></span>&nbsp;<span class="post-category">included in <a href="/categories/printing/"><i class="far fa-folder fa-fw"></i>Printing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-01">2019-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1758 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;9 minutes&nbsp;<span id="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" class="leancloud_visitors" data-flag-title="Modify Printer Permissions">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#original-links">Original Links</a></li>
+    <li><a href="#output-from-technet-gallery">Output from Technet Gallery</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="original-links">Original Links</h2>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> Original Technet URL <a href="https://gallery.technet.microsoft.com/Modify-Printer-Permissions-149ae172" target="_blank" rel="noopener noreffer">Modify Printer Permissions</a></li>
+<li><i class="far fa-check-square fa-fw"></i> Original Technet Description URL <a href="https://gallery.technet.microsoft.com/Modify-Printer-Permissions-149ae172/description" target="_blank" rel="noopener noreffer">Description</a></li>
+<li><i class="far fa-check-square fa-fw"></i> Download: <a href="Download%5cSet-PrinterPermissions.ps1" rel="">Download Link</a></li>
+</ul>
+<h2 id="output-from-technet-gallery">Output from Technet Gallery</h2>
+<p>This script was created to modify the DACL of printer objects.  It can be</p>
+<p>used to **add <strong>specific permissions or</strong>remove **permissions from printers on</p>
+<p>the localhost or a specified server. It accepts access masks, such as</p>
+<p>&ldquo;ManageDocuments&rdquo;, in either text or integer based format.</p>
+<p><strong>Example Usage 1:</strong></p>
+<p>.\Set-PrinterPermissions -ServerName &ldquo;PrintSrv1&rdquo; -AccountName &ldquo;ServerAdmins&rdquo; -AccessMask &ldquo;ManageDocuments&rdquo;</p>
+<p>*In this example the ServerAdmins group will be given the ManageDocuments</p>
+<p>permissions on all printers on the server PrintSrv1.*</p>
+<p><strong>Example Usage 2:</strong></p>
+<p>.\Set-PrinterPermissions -ServerName &ldquo;PrintSrv1&rdquo; -AccountName &ldquo;ServerAdmins&rdquo; -Remove</p>
+<p>*In this example the ServerAdmins group will have all permissions removed from</p>
+<p>all printers on the server PrintSrv1.*</p>
+<p>See -full help for additional examples.  If no parameters are set, aside from the</p>
+<p>mandatory AccountName, it will set the &ldquo;Print&rdquo; permission on all printers</p>
+<p>of the host it is ran on.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;#
+    .Synopsis
+    Purpose:  Modifies Printer Permissions.
+    .DESCRIPTION
+    This script was created to modify the DACL of printer objects.  It can be
+    used to add specific permissions or remove permissions from printers on
+    the localhost or a specified server.
+    See -full help for example usage.  If no parameters are set, aside from the
+    mandatory AccountName, it will set the &#34;Print&#34; permission on all printers
+    of the host it is ran on.
+    As an alternative to this script, something like SubInACL.exe can be used
+    to alter printer permissions.
+    .PARAMETER ServerName
+    Specify the SamAccountName of a server on which to modify printer permissions.
+    .PARAMETER AccountName
+    Mandatory. Specify the sAMAccountName, or userPrincipalName, of a User or Group
+    on which to modify or create permissions.
+    .PARAMETER SinglePrinterName
+    Specify an individual printer to modify permissions on. If no printer is
+    specified, all printers on the target server will be updated.
+    .PARAMETER AccessMask
+    The permission Access Mask to be applied. Only relevant printer bit masks represented.
+    &#34;ManagePrinters&#34;,&#34;ManageDocuments&#34;,&#34;Print&#34;,&#34;TakeOwnership&#34;,&#34;ReadPermissions&#34;,
+     or &#34;ChangePermissions&#34;. The default value for this is Print.
+    .PARAMETER Deny
+    AccessMask AccessType will be set to &#34;Deny&#34;.  Default is to &#34;Allow&#34;
+    .PARAMETER Remove
+    Removes all Access Control Entries associated with the specified Account Name.
+    .PARAMETER AceFlag
+    A bit flag that indicates permission propagation:
+    0x0001 - OBJECT_INHERIT_ACE
+    0x0002 - CONTAINER_INHERIT_ACE
+    0x0004 - NO_PROPAGATE_INHERIT_ACE
+    0x0008 - INHERIT_ONLY_ACE
+    0x0010 - INHERITED_ACE
+    .PARAMETER IntAccessMask
+    uint32 representation of an access mask.  If used, it overrides the AccessMask
+    parameter.
+    .PARAMETER NoLog
+    Specify not to create a log file.
+    .PARAMETER LogFile
+    The path and file name of the desired log file. &#34;C:\Logfile.txt&#34;
+    .Example
+    .\Set-PrinterPermissions -AccountName &#34;ServerAdmins&#34; -AccessMask ManageDocuments
+    Grants a &#34;ServerAdmins&#34; group the ManageDocuments permission on all printers of
+    the executing host.  Creates a log in the executing directory.
+    .Example
+    .\Set-PrinterPermissions -AccountName &#34;bob&#34; -Remove -NoLog
+    Removes all Access Control Entries associated with &#34;bob&#34; on all printers
+    of the executing host. Specifies not to create a log.
+    .Example
+    .\Set-PrinterPermissions -ServerName &#34;PrtSrv1&#34; -AccountName &#34;alice@upn.loc&#34; -AccessMask Print -SinglePrinterName &#34;Printer1&#34;
+    Gives alice@upn.loc the Print permission on &#34;Printer1&#34; located on the
+    server &#34;PrtSrv1&#34;. Creates a log in the executing directory.
+    .Example
+    .\Set-PrinterPermissions -ServerName &#34;PrtSrv2&#34; -AccountName &#34;bob&#34; -AccessMask ChangePermissions -Deny -LogFile &#34;C:\ScriptLogs\aLogFile.txt&#34;
+    Denies bob the ChangePermissions permission on all printers on the
+    &#34;PrtSrv2&#34; server.  Writes the log to the &#34;aLogFile.txt&#34; file in the
+    &#34;C:\ScriptLogs&#34; directory.
+    .Example
+    .\Set-PrinterPermissions -ServerName &#34;PrtSrv1&#34; -AccountName &#34;ServerAdmins&#34; -IntAccessMask 268435456
+    Grants a &#34;ServerAdmins&#34; group all permissions sans &#34;ManageDocuments&#34; on
+    &#34;PrintSrv1&#34; using the integer Access Mask. Creates a log in the
+    executing directory.
+    .NOTES
+    Author:   Dan Ubel
+    Comments: This script uses WMI.  At somepoint it will be updated to use the
+              System.Security.AccessControl Namespace and/or Get-CimInstance.
+    Warning:  This code is made available as is, without warranty of any kind.
+              The risk of use or results from the use of this code remains with
+              the user.
+#&gt;
+param(
+        [parameter(Position=0,HelpMessage=&#39;Server sAMAccountName on which to modify permissions.&#39;)]`
+    [string]$ServerName=&#34;.&#34;,
+        [parameter(Position=1,Mandatory=$true,HelpMessage=&#39;User or Group SamAccountName, or userPrincipalName, for permissions.&#39;)]`
+    [string]$AccountName=&#34;&#34;,
+        [parameter(Position=2,HelpMessage=&#39;Individual Win32_Printer Name of a printer to modify permissions on.&#39;)]`
+    [string]$SinglePrinterName=&#34;&#34;,
+        [parameter(Position=3,HelpMessage=&#39;Printer Access Mask. Default is Print&#39;)]`
+        [ValidateSet(&#34;ManagePrinters&#34;,&#34;ManageDocuments&#34;,&#34;Print&#34;,&#34;TakeOwnership&#34;,&#34;ReadPermissions&#34;,&#34;ChangePermissions&#34;)]`
+    [string]$AccessMask=&#34;Print&#34;,
+        [parameter(Position=4,HelpMessage=&#39;Default Access Type is Allow. Use the -Deny to set access type to Deny.&#39;)]`
+    [switch]$Deny,
+        [parameter(Position=5,HelpMessage=&#39;Remove all access control entries for AccountName.&#39;)]`
+    [switch]$Remove,
+        [parameter(Position=6,HelpMessage=&#39;Win32 ACE Flag.&#39;)]`
+        [ValidateRange(1,31)]
+    [int]$AceFlag=-1,
+        [parameter(Position=7,HelpMessage=&#39;uint32 Access Mask.&#39;)]`
+    [uint32]$IntAccessMask=0,
+        [parameter(Position=8,HelpMessage=&#39;Do not output a log file&#39;)]`
+    [switch]$NoLog,
+        [parameter(Position=9,HelpMessage=&#39;Path and filename of a log file.&#39;)]`
+    [string]$LogFile=&#34;&#34;
+    )
+#included for clarity
+Set-Variable AccessMasks -Option ReadOnly -Force -Value @{
+    &#34;ManagePrinters&#34; = 983052;
+    &#34;ManageDocuments&#34; = 983088;
+    &#34;Print&#34; = 131080;
+    &#34;TakeOwnership&#34; = 524288;
+    &#34;ReadPermissions&#34; = 131072;
+    &#34;ChangePermissions&#34; = 262144}
+Set-Variable AccessTypes -Option ReadOnly -Force -Value @{
+    &#34;Allow&#34; = 0;
+    &#34;Deny&#34; = 1}
+Set-Variable AceFlags -Option ReadOnly -Force -Value @{
+    &#34;OBJECT_INHERIT_ACE&#34; = 0x0001;
+    &#34;CONTAINER_INHERIT_ACE&#34; = 0x0002;
+    &#34;NO_PROPAGATE_INHERIT_ACE&#34; = 0x0004;
+    &#34;INHERIT_ONLY_ACE&#34; = 0x0008;
+    &#34;INHERITED_ACE&#34; = 0x0010}
+Set-Variable SDControlFlags -Option ReadOnly -Force -Value @{
+    &#34;SE_DACL_AUTO_INHERIT_REQ&#34; = 0x0100;
+    &#34;SE_DACL_AUTO_INHERITED&#34; = 0x0400;
+    &#34;SE_DACL_DEFAULTED&#34; = 0x0008;
+    &#34;SE_DACL_PRESENT&#34; = 0x0004;
+    &#34;SE_DACL_PROTECTED&#34; = 0x1000;
+    &#34;SE_GROUP_DEFAULTED&#34; = 0x0002;
+    &#34;SE_OWNER_DEFAULTED&#34; = 0x0001;
+    &#34;SE_RM_CONTROL_VALID&#34; = 0x4000;
+    &#34;SE_SACL_AUTO_INHERIT_REQ&#34; = 0x0200;
+    &#34;SE_SACL_AUTO_INHERITED&#34; = 0x0800;
+    &#34;SE_SACL_DEFAULTED&#34; = 0x0008;
+    &#34;SE_SACL_PRESENT&#34; = 0x0010;
+    &#34;SE_SACL_PROTECTED&#34; = 0x2000;
+    &#34;SE_SELF_RELATIVE&#34; = 0x8000}
+Set-Variable SecDescriptorReturnCodes -Option ReadOnly -Force -Value @{
+    &#34;Success&#34;= 0;
+    &#34;Access Denied&#34;= 2;
+    &#34;Unknown Error&#34;= 8;
+    &#34;The user does not have adequate privileges to execute the method&#34;= 9;
+    &#34;A parameter specified in the method call is invalid&#34;= 21}
+function Get-Win32_Printers(){
+    param(
+        [string]$ServerSamAccount,
+        [string]$PrinterName=&#34;&#34;)
+    [System.Management.ManagementBaseObject[]]$win32Printers = @()
+    $win32Printers
+    try{
+        if($PrinterName -ne &#34;&#34;){
+            $win32Printers += Get-WmiObject Win32_Printer -ComputerName $ServerSamAccount -Filter &#34;Name=&#39;$PrinterName&#39;&#34;
+        }
+        else{
+            $win32Printers += Get-WmiObject Win32_Printer -ComputerName $ServerSamAccount -Filter &#34;Local=&#39;$True&#39;&#34;
+        }
+    }
+    catch{Write-ScriptMessage -Msg(&#34;`nERROR: Get-Win32Printers()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return $win32Printers
+}
+function New-Win32PrinterACE(){
+    param(
+        [string]$AceUser,
+        [int]$AceMask,
+        [int]$AceAccessType,
+        [int]$AceFlag)
+    $newWin32PrinterAce = ([WMIClass] &#34;Win32_Ace&#34;).CreateInstance()
+    try{
+        $newWin32PrinterAce.Trustee = New-Win32_Trustee $AceUser
+        $newWin32PrinterAce.AccessMask = $AceMask
+        $newWin32PrinterAce.AceType = $AceAccessType
+        $newWin32PrinterAce.AceFlags = $AceFlag
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: New-Win32PrinterACE()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return $newWin32PrinterAce
+}
+function New-Win32_Trustee(){
+    param(
+        [string]$TrusteeUser)
+    $newWin32Trustee = ([WMIClass] &#34;Win32_Trustee&#34;).CreateInstance()
+    try{
+        $trusteeUserSid = (New-Object Security.Principal.NTAccount $TrusteeUser).Translate([Security.Principal.SecurityIdentifier])
+        $trusteeByteSid = ([System.Text.Encoding]::UTF8).GetBytes($trusteeUserSid.Value)
+        $trusteeUserSid.GetBinaryForm($trusteeByteSid, 0)
+        $newWin32Trustee.Name = $TrusteeUser
+        $newWin32Trustee.SID = $trusteeByteSid
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: New-Win32_Trustee()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return $newWin32Trustee
+}
+function Get-Win32_PrinterDACL(){
+    param(
+        [System.Management.ManagementBaseObject]$Win32Printer)
+    try{
+        [System.Management.ManagementBaseObject[]]$win32PrinterDACL = $Win32Printer.GetSecurityDescriptor().Descriptor.DACL
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: Get-Win32_PrinterDACL()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return  $win32PrinterDACL
+}
+function New-Win32SecurityDescriptor(){
+    param(
+        [System.Management.ManagementBaseObject[]]$Win32PrinterDACL,
+        [int]$ControlFlags)
+    $newSecDescriptor = ([WMIClass] &#34;Win32_SecurityDescriptor&#34;).CreateInstance()
+    try{
+        $newSecDescriptor.DACL = $Win32PrinterDACL
+        $newSecDescriptor.ControlFlags = $ControlFlags
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: New-Win32_SecurityDescriptor()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return $newSecDescriptor
+}
+function Set-Win32_SecurityDescriptor(){
+    param(
+        [System.Management.ManagementObject]$Win32Printer,
+        [System.Management.ManagementObject]$Win32SecurityDescriptor)
+    $setResult = 0
+    try{
+        $setResult = $Win32Printer.SetSecurityDescriptor($Win32SecurityDescriptor)
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: Set-Win32_SecurityDescriptor()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return $setResult
+}
+function Set-LogFile(){
+    param(
+        [string]$OpLog)
+    try{
+        if($OpLog -eq &#34;&#34;){
+            $newLog = &#34;Set-PrinterPermissions.&#34;+(Get-Date -Format MMdd-hhmm) +&#34;.txt&#34;
+            $OpLog = New-Item $newLog -Type file -Force
+        }
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: Set-LogFile()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    return $OpLog
+}
+function Write-ScriptMessage(){
+    param(
+        [bool]$LogDisabled,
+        [parameter(Mandatory=$false)][string]$Msg,
+        [parameter(Mandatory=$false)][string]$File)
+    if(!$LogDisabled){
+        Add-Content $File $Msg
+    }
+}
+function Set-PrinterPermissions(){
+    if(!$NoLog){
+        [string]$LogFile = Set-LogFile $LogFile
+    }
+    Write-ScriptMessage -Msg (&#34;`nStarted: &#34; + (Get-Date)) -LogDisabled $NoLog -File $LogFile
+    $accessType = $AccessTypes.Allow
+    if($Deny){
+        $accessType = $AccessTypes.Deny
+    }
+    [uint32]$aMask = $AccessMasks.Get_Item(&#34;$AccessMask&#34;)
+    if($IntAccessMask -ne 0){
+        $aMask = $IntAccessMask
+    }
+    if($aMask -eq $AccessMasks.ManageDocuments -and $AceFlag -eq -1){
+        #To &#34;ManageDocuments&#34;, according to a bit of testing, you need OBJECT_INHERIT_ACE and INHERIT_ONLY_ACE
+        $AceFlag = 0x0009
+    }
+    elseif($AceFlag -eq -1){
+        $AceFlag = 0x0004
+    }
+    try{
+        (New-Object Security.Principal.NTAccount $AccountName).Translate([Security.Principal.SecurityIdentifier]) | Out-Null
+        if($ServerName -eq &#34;.&#34; -or (Test-Connection $ServerName -Count 1 -Quiet)){
+            [System.Management.ManagementBaseObject[]]$mPrinters = @()
+            #Retrieve the requested printers to update
+            if($SinglePrinterName -eq &#34;&#34;){
+                $mPrinters += Get-Win32_Printers -ServerSamAccount $ServerName
+            }
+            else{
+                $mPrinters += Get-Win32_Printers -ServerSamAccount $ServerName -PrinterName $SinglePrinterName
+            }
+            if(!$Remove){
+                #Create the requested ACE
+                $newAce = New-Win32PrinterACE -AceUser $AccountName -AceMask $aMask -AceType $accessType -AceFlag $AceFlag
+                Write-ScriptMessage -Msg (&#34;`r`n&#34;+$mPrinters.Count + &#34; Printer(s) to be updated.&#34; + `
+                &#34;`r`nAccount: $AccountName`r`nMask: $aMask &#34;+ ($AccessMasks.GetEnumerator()|Where-Object {$_.Value -eq $aMask}|`
+                select -ExpandProperty Name) +&#34;`r`nType: $accessType`r`nFlag: $AceFlag`r`n&#34;) -LogDisabled $NoLog -File $LogFile
+            }
+            else{
+                Write-ScriptMessage -Msg (&#34;`r`n&#34;+$mPrinters.Count + &#34; Printer(s) to be updated.&#34; + `
+                &#34;`r`nRemoving all Access Control Entries for: $AccountName`r`n&#34;) -LogDisabled $NoLog -File $LogFile
+            }
+            foreach($mPrinter in $mPrinters){
+                #Get the DACL for the printer
+                $printerDACL = Get-Win32_PrinterDACL -Win32Printer $mPrinter
+                #Update the DACL
+                if($Remove){
+                    $printerDACL = $printerDACL | Where-Object {$_.Trustee.Name -ne $AccountName}
+                }
+                else{
+                    $printerDACL += $newAce
+                }
+                #Create an updated Security Descriptor
+                $secDescriptor = New-Win32SecurityDescriptor -Win32PrinterDACL $printerDACL -ControlFlags $SDControlFlags.SE_DACL_PRESENT
+                #Set new Security Descriptor on the printer
+                $sdResult = Set-Win32_SecurityDescriptor -Win32Printer $mPrinter  -Win32SecurityDescriptor $secDescriptor
+                #Write results
+                if($SecDescriptorReturnCodes.ContainsValue([int]$sdResult.ReturnValue[0])){
+                    $resultMsg = $SecDescriptorReturnCodes.GetEnumerator() | Where-Object {$_.Value -eq $sdResult.ReturnValue[0]} | select -ExpandProperty Name
+                    Write-ScriptMessage -Msg (&#34;`n&#34;+$mPrinter.Name+&#34;,&#34; +$resultMsg) -LogDisabled $NoLog -File $LogFile
+                }
+                else{
+                    Write-ScriptMessage -Msg (&#34;`n&#34;+$mPrinter.Name + `
+                        &#34;: Unrecognized Return Code from Set-Win32_SecurityDescriptor --- &#34; + $sdResult.ReturnValue[0]) -LogDisabled $NoLog -File $LogFile
+                }
+            }
+        }
+        else{
+            Write-ScriptMessage -Msg (&#34;`nError: Server Offline. Unable to ping Server: &#34; + $ServerName) -LogDisabled $NoLog -File $LogFile
+        }
+    }
+    catch{Write-ScriptMessage -Msg (&#34;`nERROR: Set-PrinterPermissions()`nType: &#34; + `
+        $_.Exception.GetType().FullName+&#34;`nMessage: &#34;+$_.Exception.Message) -LogDisabled $NoLog -File $LogFile}
+    Write-ScriptMessage -Msg (&#34;`r`nFinished: &#34; + (Get-Date)) -LogDisabled $NoLog -File $LogFile
+}
+#Start
+Set-PrinterPermissions
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-01-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" data-title="Modify Printer Permissions" data-via="xxxx" data-hashtags="Active Directory,HTML"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" data-hashtag="Active Directory"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" data-title="Modify Printer Permissions"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" data-title="Modify Printer Permissions"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-149ae172/modify-printer-permissions-149ae172/" data-title="Modify Printer Permissions"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/active-directory/">Active Directory</a>,&nbsp;<a href="/tags/html/">HTML</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/printing/print-servers-print-queues-and-print-jobs/modify-printer-permissions-b3a3770e/modify-printer-permissions-b3a3770e/" class="prev" rel="prev" title="Modify Printer Permissions"><i class="fas fa-angle-left fa-fw"></i>Modify Printer Permissions</a>
+            <a href="/printing/print-servers-print-queues-and-print-jobs/3c3bebe5-5303-42d8-970d-f8919e5261a9/3c3bebe5-5303-42d8-970d-f8919e5261a9/" class="next" rel="next" title="Modify Printer Locations">Modify Printer Locations<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
